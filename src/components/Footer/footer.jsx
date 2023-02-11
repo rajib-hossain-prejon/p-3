@@ -108,17 +108,29 @@ const Footer = ({ hideBGCOLOR }) => {
               </div>
               <div className='social'>
                 <a
-                  href='https://www.linkedin.com/in/rajib-hossain-prejon-089505202'
-                  target='_blank'
+                  onClick={() =>
+                    window.open(
+                      'https://www.linkedin.com/in/rajib-hossain-prejon-089505202',
+                      '_blank'
+                    )
+                  }
                 >
                   <i className='fab fa-linkedin mx-4'></i>
                 </a>
-                <a href='https://wa.me/+8801518647550' target='_blank'>
+                <a
+                  onClick={() =>
+                    window.open('https://wa.me/+8801518647550', '_blank')
+                  }
+                >
                   <i className='fab fa-whatsapp mx-4'></i>
                 </a>
                 <a
-                  href='https://github.com/rajib-hossain-prejon/'
-                  target='_blank'
+                  onClick={() =>
+                    window.open(
+                      'https://github.com/rajib-hossain-prejon/',
+                      '_blank'
+                    )
+                  }
                 >
                   <i className='fab fa-github mx-4'></i>
                 </a>
