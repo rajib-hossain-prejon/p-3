@@ -36,8 +36,8 @@ const Homepage = () => {
       <Services5 />
       <WorksStyle4 />
       <AboutUs5 />
-      <FullTestimonials showHead />
-      <Blogs2 />
+      {/* <FullTestimonials showHead />
+      <Blogs2 /> */}
       <SContactForm noLine />
       <Footer />
     </LightTheme>
