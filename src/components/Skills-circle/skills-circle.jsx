@@ -30,11 +30,19 @@ const SkillsCircle = ({ from, theme }) => {
     >
       <div className='container'>
         <div className='row text-center'>
+          <div className='mx-auto mb-20'>
+            <h1 className=' color-font fw-200'>My Skills</h1>
+            <br />
+            <p className='wow txt' data-splitting>
+              This is dummy data. Real data is Coming Soon.This is dummy data.
+              Real data is Coming Soon. InsALLAH.....
+            </p>
+          </div>
           <div className='col-lg-12 mx-auto'>
             {' '}
             {/* col-lg-7 chilo */}
-            <div className='pl-5 ml-5'>
-              <div className='row '>
+            <div className='px-auto mx-auto'>
+              <div className='row ml-5 pl-5'>
                 {/* ----------------- Three Skill ------------------- */}
                 {skillsData.map((data) => (
                   <div
