@@ -1,6 +1,12 @@
 import React from 'react';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import {
+  CircularProgressbar,
+  buildStyles,
+  CircularProgressbarWithChildren,
+} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+
+import skillsData from '../../data/sections/skills.json';
 
 const SkillsCircle = ({ from, theme }) => {
   const cpStyle = {
@@ -23,176 +29,64 @@ const SkillsCircle = ({ from, theme }) => {
       }`}
     >
       <div className='container'>
-        <div className='row'>
-          <div className='col-lg-12'>
+        <div className='row text-center'>
+          <div className='col-lg-12 mx-auto'>
             {' '}
             {/* col-lg-7 chilo */}
-            <div className=''>
-              <div className='row'>
+            <div className='pl-5 ml-5'>
+              <div className='row '>
                 {/* ----------------- Three Skill ------------------- */}
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-4 col-md-5 col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
+                {skillsData.map((data) => (
+                  <div className=' col-lg-2 col-md-5   col-sm-10 m-2 p-2'>
+                    <div className='item wow fadeInLeft' data-wow-delay='.6'>
+                      <div className='skill'>
+                        {/* <CircularProgressbar
                         value={90}
                         strokeWidth={2}
                         text={`${90}%`}
                         styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>App</span>
-                      <h6>Consulting</h6>
+                      /> */}
+                        <CircularProgressbarWithChildren
+                          value={data.percantage}
+                          strokeWidth={2}
+                          styles={cpStyle}
+                        >
+                          {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                          {/* <img
+                          style={{ width: 40, marginTop: -5 }}
+                          src='https://img.icons8.com/color/48/null/tailwindcss.png'
+                          alt='doge'
+                        />
+                        <div style={{ fontSize: 12, marginTop: -5 }}>
+                          <strong>66%</strong> mate
+                        </div> */}
+                          <div
+                            className='cont w-100 px-1 text-center '
+                            style={{ marginTop: -10 }}
+                          >
+                            <small>{data.title}</small>
+                            {/* <br />
+                          <small>90%</small>
+                          <br /> */}
+                            <br />
+                            <img
+                              src={data.img}
+                              style={{
+                                width: '27px',
+                                border: '1px solid white',
+                                borderRadius: '50%',
+                                padding: 2,
+                                marginTop: '-5',
+                              }}
+                            />
+                          </div>
+                        </CircularProgressbarWithChildren>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
 
                 {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-4 col-md-5   col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-3 col-md-5 col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Three Skill ------------------- */}
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-4 col-md-5 col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-4 col-md-5   col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-3 col-md-5 col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Three Skill ------------------- */}
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-4 col-md-5 col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-4 col-md-5   col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ----------------- Skill (i) ------------------- */}
-                <div className=' col-lg-3 col-md-5 col-sm-10 m-2 p-2'>
-                  <div className='item wow fadeInLeft' data-wow-delay='.6'>
-                    <div className='skill'>
-                      <CircularProgressbar
-                        value={90}
-                        strokeWidth={2}
-                        text={`${90}%`}
-                        styles={cpStyle}
-                      />
-                    </div>
-                    <div className='cont'>
-                      <span>Project</span>
-                      <h6>Consulting</h6>
-                    </div>
-                  </div>
-                </div>
 
                 {/* ----------------- Skill (i) -------------------
                 <div className='col-lg-4 col-md-6'>
