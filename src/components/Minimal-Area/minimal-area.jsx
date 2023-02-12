@@ -18,7 +18,7 @@ const MinimalArea = () => {
             <div className='img'>
               <img
                 className='thumparallax-down'
-                src='/img/prejon700.jpg'
+                src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon700_isjo5e.jpg'
                 alt=''
               />
             </div>

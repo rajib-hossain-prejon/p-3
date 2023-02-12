@@ -9,7 +9,11 @@ const FreelancreIntro = () => {
         <div className='row'>
           <div className='col-lg-4'>
             <div className='img'>
-              <img style={{ zIndex: -5 }} src='/img/prejon.jpg' alt='' />
+              <img
+                style={{ zIndex: -5 }}
+                src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon_lkzf2r.jpg'
+                alt=''
+              />
             </div>
           </div>
           <div className='col-lg-8 valign'>
