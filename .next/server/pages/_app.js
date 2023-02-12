@@ -150,7 +150,7 @@ module.exports = require("react/jsx-dev-runtime");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"lightLogo":"/img/logo-sky.png","darkLogo":"/img/logo-sky.png","showLoading":true}');
+module.exports = JSON.parse('{"lightLogo":"https://res.cloudinary.com/dllxgj3ac/image/upload/v1676206918/rajibhossainprejon.com%28p3%29/homepage/logo/logo-sky_a2xun2.png","darkLogo":"https://res.cloudinary.com/dllxgj3ac/image/upload/v1676206918/rajibhossainprejon.com%28p3%29/homepage/logo/logo-sky_a2xun2.png","showLoading":true}');
 
 /***/ })
 
