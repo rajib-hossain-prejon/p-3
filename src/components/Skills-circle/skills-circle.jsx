@@ -37,7 +37,10 @@ const SkillsCircle = ({ from, theme }) => {
               <div className='row '>
                 {/* ----------------- Three Skill ------------------- */}
                 {skillsData.map((data) => (
-                  <div className=' col-lg-2 col-md-5   col-sm-10 m-2 p-2'>
+                  <div
+                    key={data.id}
+                    className=' col-lg-2 col-md-5   col-sm-10 m-2 p-2'
+                  >
                     <div className='item wow fadeInLeft' data-wow-delay='.6'>
                       <div className='skill'>
                         {/* <CircularProgressbar
