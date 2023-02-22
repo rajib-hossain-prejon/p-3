@@ -1,9 +1,11 @@
 import React from 'react';
 import ContactFromDate from '../../data/sections/form-info.json';
 import { Formik, Form, Field } from 'formik';
+import { sendContactForm } from '../../../lib/api';
 
 const ContactForm = () => {
   const messageRef = React.useRef(null);
+
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -29,28 +31,37 @@ const ContactForm = () => {
                 }}
                 onSubmit={async (values) => {
                   await sendMessage(500);
-                  alert(JSON.stringify(values, null, 2));
-                  fetch('/api/mail', {
-                    method: 'post',
-                    body: JSON.stringify(values),
-                  });
-                  // show message
+                  try {
+                    await sendContactForm(values);
+                    alert('Message Sent Successfully');
+                  } catch (error) {
+                    error: error.message;
+                  }
 
-                  messageRef.current.innerText =
-                    'Your Message has been successfully sent. I will contact you soon.';
+                  // show message
+                  messageRef.current.innerText = `Your Message has been successfully sent. I will contact you soon.`;
+                  setTimeout(() => {
+                    messageRef.current.innerText = '';
+                  }, 10000);
                   // Reset the values
                   values.name = '';
                   values.email = '';
                   values.message = '';
                   // clear message
-                  setTimeout(() => {
-                    messageRef.current.innerText = '';
-                  }, 2000);
                 }}
               >
                 {({ errors, touched }) => (
                   <Form id='contact-form'>
-                    <div className='messages' ref={messageRef}></div>
+                    <div
+                      className='messages'
+                      ref={messageRef}
+                      style={{
+                        color: 'green',
+                        fontSize: '1rem',
+                        fontWeight: 600,
+                      }}
+                    ></div>
+
                     <div className='controls'>
                       <div className='form-group'>
                         <Field
