@@ -60,7 +60,7 @@ const SContactForm = ({ noLine }) => {
                   // clear message
                   setTimeout(() => {
                     messageRef.current.innerText = '';
-                  }, 2000);
+                  }, 10000);
                 }}
               >
                 {({ errors, touched }) => (
