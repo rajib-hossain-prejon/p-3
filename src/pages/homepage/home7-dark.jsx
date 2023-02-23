@@ -38,7 +38,7 @@ const Homepage = () => {
       <FreelancreIntro />
       <Services5 />
       <WorksStyle4 />
-      <AboutUs5 />
+      <AboutUs5  />
       {/* <FullTestimonials showHead />
       <Blogs2 /> */}
       <SContactForm noLine />
