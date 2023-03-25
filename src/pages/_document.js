@@ -12,8 +12,8 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          {/* <meta httpEquiv='X-UA-Compatible' content='IE=edge' /> */}
-          <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+          <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+          {/* <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /> */}
 
           <meta
             name='keywords'
