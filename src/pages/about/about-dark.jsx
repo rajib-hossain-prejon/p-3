@@ -36,8 +36,8 @@ const About = () => {
     <DarkTheme>
       <Navbar nr={navbarRef} lr={logoRef} from='about-dark' />
       <PagesHeader />
-      {/* <AboutIntro /> */}
-      {/* <Services style='4item' /> */}
+      <AboutIntro />
+      <Services style='4item' />
       {/* <VideoWithTestimonials /> */}
       <MinimalArea />
       <SkillsCircle from='aboutPage' />

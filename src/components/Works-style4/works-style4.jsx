@@ -2,11 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import initIsotope from '../../common/initIsotope';
+import { useRouter } from 'next/router';
 
 import projectsData from '../../data/sections/projects.json';
 
 const WorksStyle4 = () => {
-  console.log('data', projectsData);
+  const router = useRouter();
+
   React.useEffect(() => {
     setTimeout(() => {
       initIsotope();
@@ -53,28 +55,96 @@ const WorksStyle4 = () => {
                         <p>{data.subtitle}</p>
                       </div>
                       {/* <Link href={`/project-details2/project-details2-dark`}> */}
-                      <a className='rota'>
+                      <a
+                        className='rota'
+                        onClick={() => window.open(data.live_link, '_blank')}
+                      >
                         <img src={data.img} alt='image' />
                         <div className='item-img-overlay'></div>
                       </a>
                       {/* </Link> */}
                       <div className='tags'>
-                        <span>
-                          <a
-                            onClick={() =>
-                              window.open(data.live_link, '_blank')
-                            }
-                          >
-                            Live Link
-                          </a>
-                        </span>
-                        <span>
+                        {data.no_livelink ? (
+                          data.source_code_btn ? (
+                            <>
+                              <span
+                                style={{
+                                  display: 'inline-block',
+                                  backgroundColor: '#059AA6',
+                                  color: '#fff',
+                                  padding: '10px 20px',
+                                  borderRadius: '5px',
+                                }}
+                              >
+                                <a
+                                  onClick={() =>
+                                    window.open(data.live_link, '_blank')
+                                  }
+                                  style={{
+                                    color: '#fff',
+                                    textDecoration: 'none',
+                                  }}
+                                >
+                                  Source Code
+                                </a>
+                              </span>
+                            </>
+                          ) : (
+                            <>
+                              <span
+                                style={{
+                                  display: 'inline-block',
+                                  backgroundColor: '#059AA6',
+                                  color: '#fff',
+                                  padding: '10px 20px',
+                                  borderRadius: '5px',
+                                }}
+                              >
+                                <a
+                                  onClick={() => router.push(data.live_link)}
+                                  style={{
+                                    color: '#fff',
+                                    textDecoration: 'none',
+                                  }}
+                                >
+                                  See demo
+                                </a>
+                              </span>
+                            </>
+                          )
+                        ) : (
+                          <>
+                            <span
+                              style={{
+                                display: 'inline-block',
+                                backgroundColor: '#059AA6',
+                                color: '#fff',
+                                padding: '10px 20px',
+                                borderRadius: '5px',
+                              }}
+                            >
+                              <a
+                                onClick={() =>
+                                  window.open(data.live_link, '_blank')
+                                }
+                                style={{
+                                  color: '#fff',
+                                  textDecoration: 'none',
+                                }}
+                              >
+                                See demo
+                              </a>
+                            </span>
+                          </>
+                        )}
+
+                        {/* <span>
                           <Link href={data.source_code}>
                             <a target='_blank' rel='noopener noreferrer'>
                               Source Code
                             </a>
                           </Link>
-                        </span>
+                        </span> */}
                       </div>
                     </div>
                   </div>

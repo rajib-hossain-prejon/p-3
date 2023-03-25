@@ -12,16 +12,20 @@ const FreelancreIntro = () => {
               <img
                 style={{ zIndex: -5 }}
                 src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon_lkzf2r.jpg'
-                alt=''
+                alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
               />
             </div>
           </div>
-          <div className='col-lg-8 valign'>
+          {/* I have deleted className='valign' */}
+          <div className='col-lg-8 '>
             <div className='cont'>
-              <h1 className='cd-headline clip'>
-                Hello, My name is <br />
-                <span
-                  style={{ fontSize: '38px', lineHeight: '49px' }}
+              <div>
+                <h3 className='cd-headline clip'>Hello, My name is</h3>
+              </div>
+              <br />
+              <div>
+                <h1
+                  style={{ fontSize: '32px', lineHeight: '38px' }}
                   className='cd-words-wrapper'
                 >
                   <Typewriter
@@ -36,14 +40,16 @@ const FreelancreIntro = () => {
                       typewriter;
                     }}
                   />
-                </span>
-                <br />
-                <span style={{ fontSize: '20px' }}>
-                  I Love To Develop{' '}
-                </span>{' '}
-                <span> </span>
-                <span
-                  style={{ fontSize: '30px', lineHeight: '55px' }}
+                </h1>
+              </div>
+              <br />
+              <div style={{ fontSize: '20px', lineHeight: '55px' }}>
+                I Love To Develop
+              </div>
+
+              <div>
+                <h1
+                  style={{ fontSize: '30px', lineHeight: '35px' }}
                   className='cd-words-wrapper'
                 >
                   <Typewriter
@@ -64,8 +70,8 @@ const FreelancreIntro = () => {
                       typewriter;
                     }}
                   />
-                </span>
-              </h1>
+                </h1>
+              </div>
             </div>
           </div>
         </div>

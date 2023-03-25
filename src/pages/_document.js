@@ -12,6 +12,9 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
+          <title>
+            Rajib Hossain Prejon - Expert Full-Stack Web & Mobile App Developer
+          </title>
           {/* <meta httpEquiv='X-UA-Compatible' content='IE=edge' /> */}
           <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
 
@@ -22,7 +25,7 @@ class MyDocument extends Document {
 
           <meta
             name='description'
-            content='Welcome to my portfolio website! I am Rajib Hossain Prejon, a web and mobile app developer specializing in Next.js, React, React Native, and Django. Whether you need a full-stack web app or just a frontend or backend developer, I can provide the skills and expertise you need to create an amazing product. Explore my portfolio and contact me to discuss your next project!'
+            content='Ready to take your online presence to the next level? Look no further than Rajib Hossain Prejon! As an expert full-stack developer with extensive experience in website, web app, mobile app, Android app, iOS app, frontend, and backend development, Rajib offers exceptional service and top-quality results. Contact him today to bring your digital dreams to life.'
           />
 
           <meta name='author' content='Rajib Hossain Prejon' />

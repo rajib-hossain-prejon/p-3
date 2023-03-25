@@ -34,8 +34,7 @@ const SkillsCircle = ({ from, theme }) => {
             <h1 className=' color-font fw-200'>My Skills</h1>
             <br />
             <p className='wow txt' data-splitting>
-              This is dummy data. Real data is Coming Soon.This is dummy data.
-              Real data is Coming Soon. InsALLAH.....
+              Discover and Explore My Areas of Expertise
             </p>
           </div>
           <div className='col-lg-12 mx-auto'>

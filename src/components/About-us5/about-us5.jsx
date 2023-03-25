@@ -17,7 +17,7 @@ const AboutUs5 = () => {
           <div className='col-lg-6 img md-mb50'>
             <img
               src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon700_isjo5e.jpg'
-              alt=''
+              alt='Rajib Hossain Prejon Skills'
             />
           </div>
           <div className='col-lg-5 valign'>

@@ -2,25 +2,25 @@
   {
     "id": 1,
     "icon": "pe-7s-global",
-    "title": "Web App",
-    "content": "I Develop Full-Stack Web App with React, Next.js, Redux and Djanog"
+    "title": "Web Development",
+    "content": "I provide full-stack web application development services, creating responsive and scalable applications that drive results"
   },
   {
     "id": 2,
     "icon": "pe-7s-phone",
-    "title": "Android & IOS App",
-    "content": "I Develop Android and IOS app with react native"
+    "title": "Android & iOS App Development",
+    "content": "I develop Android and iOS applications that are intuitive, user-friendly, and tailored to your unique needs"
   },
   {
     "id": 3,
     "icon": "pe-7s-display1",
     "title": "Frontend Development",
-    "content": "I Develop Eye Catchy Frontend with React or Next.js"
+    "content": "I specialize in frontend development, creating visually stunning and responsive websites that provide seamless user experiences."
   },
   {
     "id": 4,
     "icon": "pe-7s-back-2",
     "title": "Backend Development",
-    "content": "I Develop quality Backend with Django"
+    "content": "I also provide backend development services, building robust and scalable applications that are designed to perform."
   }
 ]

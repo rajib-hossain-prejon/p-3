@@ -25,6 +25,12 @@
   },
   {
     "id": 5,
+    "title": "Node js",
+    "img": "https://img.icons8.com/fluency/48/null/node-js.png",
+    "percantage": "80"
+  },
+  {
+    "id": 13,
     "title": "Django",
     "img": "https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/null/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-filled-tal-revivo.png",
     "percantage": "80"
@@ -34,24 +40,6 @@
     "title": "Python",
     "img": "https://img.icons8.com/color/48/null/python--v1.png",
     "percantage": "70"
-  },
-  {
-    "id": 7,
-    "title": "HTML",
-    "img": "https://img.icons8.com/color/48/null/html-5--v1.png",
-    "percantage": "80"
-  },
-  {
-    "id": 8,
-    "title": "CSS",
-    "img": "https://img.icons8.com/fluency/48/null/css3.png",
-    "percantage": "80"
-  },
-  {
-    "id": 9,
-    "title": "Bootstrap",
-    "img": "https://img.icons8.com/external-those-icons-flat-those-icons/24/null/external-Bootstrap-Logo-social-media-those-icons-flat-those-icons.png",
-    "percantage": "90"
   },
   {
     "id": 10,
@@ -70,5 +58,23 @@
     "title": "MUI",
     "img": "https://img.icons8.com/color/48/null/material-ui.png",
     "percantage": "80"
+  },
+  {
+    "id": 7,
+    "title": "HTML",
+    "img": "https://img.icons8.com/color/48/null/html-5--v1.png",
+    "percantage": "80"
+  },
+  {
+    "id": 8,
+    "title": "CSS",
+    "img": "https://img.icons8.com/fluency/48/null/css3.png",
+    "percantage": "80"
+  },
+  {
+    "id": 9,
+    "title": "Bootstrap",
+    "img": "https://img.icons8.com/external-those-icons-flat-those-icons/24/null/external-Bootstrap-Logo-social-media-those-icons-flat-those-icons.png",
+    "percantage": "90"
   }
 ]

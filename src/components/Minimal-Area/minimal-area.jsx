@@ -19,35 +19,45 @@ const MinimalArea = () => {
               <img
                 className='thumparallax-down'
                 src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon700_isjo5e.jpg'
-                alt=''
+                alt='About Rajib Hossain Prejon'
               />
             </div>
           </div>
           <div className='col-lg-6 valign'>
-            <div className='content pt-0'>
+            <div className='content pt-0' style={{ marginTop: '-50px' }}>
               <h4 className='wow color-font'>About Me</h4>
               <p className='wow txt' data-splitting>
-                This is dummy data. Real data is Coming Soon.This is dummy data.
-                Real data is Coming Soon. InsALLAH.....
+                I'm a full-stack web and mobile app developer with expertise in
+                frontend and backend technologies, dedicated to delivering
+                exceptional results
               </p>
               <ul className='feat'>
                 <li className='wow fadeInUp' data-wow-delay='.2s'>
                   <h6>
                     <span>1</span> My Mission
                   </h6>
-                  <p>This is dummy data. Real data is Coming Soon</p>
+                  <p>
+                    Create innovative apps that solve real-world problems and
+                    improve lives.
+                  </p>
                 </li>
                 <li className='wow fadeInUp' data-wow-delay='.4s'>
                   <h6>
                     <span>2</span> My Goal
                   </h6>
-                  <p>This is dummy data. Real data is Coming Soon</p>
+                  <p>
+                    continuously learn and deliver exceptional results that
+                    exceed expectations.
+                  </p>
                 </li>
                 <li className='wow fadeInUp' data-wow-delay='.6s'>
                   <h6>
                     <span>3</span> Why Me?
                   </h6>
-                  <p>This is dummy data. Real data is Coming Soon</p>
+                  <p>
+                    Dedicated and creative, committed to staying up-to-date with
+                    the latest tech and best practices.
+                  </p>
                 </li>
               </ul>
             </div>
