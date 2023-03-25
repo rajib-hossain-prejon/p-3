@@ -12,6 +12,7 @@ import SContactForm from '../../components/s-contact-form/s-contact-form';
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const Homepage = () => {
   const navbarRef = React.useRef(null);
@@ -34,6 +35,11 @@ const Homepage = () => {
   }, [navbarRef]);
   return (
     <DarkTheme>
+      <Head>
+        <title>
+          Rajib Hossain Prejon - Expert Full-Stack Web & Mobile App Developer
+        </title>
+      </Head>
       <Navbar nr={navbarRef} lr={logoRef} />
       <FreelancreIntro />
       <Services5 />

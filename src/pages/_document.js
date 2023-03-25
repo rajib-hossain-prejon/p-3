@@ -12,9 +12,6 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <title>
-            Rajib Hossain Prejon - Expert Full-Stack Web & Mobile App Developer
-          </title>
           {/* <meta httpEquiv='X-UA-Compatible' content='IE=edge' /> */}
           <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
 
