@@ -25,7 +25,7 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
                     window.open(projectHeaderData.clientURLLink, '_blank')
                   }
                 >
-                  <i class='fa fa-light fa-play mr-2'></i>
+                  <i className='fa fa-light fa-play mr-2'></i>
                   See Demo
                 </button>
               )}
