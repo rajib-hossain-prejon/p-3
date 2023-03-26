@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
+import Image from 'next/image';
+
 const ProjectGallery = ({ projectGalleryData }) => {
   console.log(projectGalleryData[0]);
 
@@ -9,16 +11,36 @@ const ProjectGallery = ({ projectGalleryData }) => {
       <div className='popup-img'>
         <div className='row'>
           <a href='#' className='col-md-3 popimg'>
-            <img alt='' src={projectGalleryData[0]} />
+            <Image
+              alt='Rajib Hossain Prejon Dental Project image 1'
+              src={projectGalleryData[0]}
+              height='600'
+              width='600'
+            />
           </a>
           <a href='#' className='col-md-3 popimg'>
-            <img alt='' src={projectGalleryData[1]} />
+            <Image
+              alt='Rajib Hossain Prejon Dental Project image 2'
+              src={projectGalleryData[1]}
+              height='600'
+              width='600'
+            />
           </a>
           <a href='#' className='col-md-3 popimg'>
-            <img alt='' src={projectGalleryData[2]} />
+            <Image
+              alt='Rajib Hossain Prejon Dental Project image 2'
+              src={projectGalleryData[2]}
+              height='600'
+              width='600'
+            />
           </a>
           <a href='#' className='col-md-3 popimg'>
-            <img alt='' src={projectGalleryData[3]} />
+            <Image
+              alt='Rajib Hossain Prejon Dental Project image 3'
+              src={projectGalleryData[3]}
+              height='600'
+              width='600'
+            />
           </a>
 
           {/* <a href='#' className='col-md-12 popimg'>
