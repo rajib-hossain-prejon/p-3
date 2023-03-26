@@ -2,6 +2,8 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
+import Image from 'next/image';
+
 const FreelancreIntro = () => {
   return (
     <header className='freelancre valign'>
@@ -9,11 +11,12 @@ const FreelancreIntro = () => {
         <div className='row'>
           <div className='col-lg-4'>
             <div className='img'>
-              <img
+              <Image
                 style={{ zIndex: -5 }}
-                src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon_lkzf2r.jpg'
+                src='/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon_lkzf2r.jpg'
                 alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
-              />
+                layout='fill'
+              ></Image>
             </div>
           </div>
           {/* I have deleted className='valign' */}

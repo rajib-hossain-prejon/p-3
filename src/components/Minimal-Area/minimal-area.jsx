@@ -3,6 +3,8 @@ import React from 'react';
 import cardMouseEffect from '../../common/cardMouseEffect';
 import { thumparallaxDown } from '../../common/thumparallax';
 
+import Image from 'next/image';
+
 const MinimalArea = () => {
   React.useEffect(() => {
     cardMouseEffect(document.querySelectorAll('.feat .items'));
@@ -16,10 +18,12 @@ const MinimalArea = () => {
         <div className='row'>
           <div className='col-lg-6'>
             <div className='img'>
-              <img
+              <Image
                 className='thumparallax-down'
-                src='https://res.cloudinary.com/dllxgj3ac/image/upload/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon700_isjo5e.jpg'
+                src='/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon700_isjo5e.jpg'
                 alt='About Rajib Hossain Prejon'
+                height='700'
+                width='700'
               />
             </div>
           </div>

@@ -115,7 +115,7 @@ const Footer = ({ hideBGCOLOR }) => {
                     )
                   }
                 >
-                  <i className='fab fa-linkedin mx-4'></i>
+                  <i className='fab fa-linkedin mx-4 '></i>
                 </a>
                 <a
                   onClick={() =>

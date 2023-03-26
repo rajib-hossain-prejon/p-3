@@ -5,6 +5,7 @@ import initIsotope from '../../common/initIsotope';
 import { useRouter } from 'next/router';
 
 import projectsData from '../../data/sections/projects.json';
+import Image from 'next/image';
 
 const WorksStyle4 = () => {
   const router = useRouter();
@@ -59,7 +60,13 @@ const WorksStyle4 = () => {
                         className='rota'
                         onClick={() => window.open(data.live_link, '_blank')}
                       >
-                        <img src={data.img} alt='image' />
+                        {/* <img src={data.img} alt='image' /> */}
+                        <Image
+                          src={data.img}
+                          alt='rajib hossain prejon projects'
+                          width='800'
+                          height='600'
+                        ></Image>
                         <div className='item-img-overlay'></div>
                       </a>
                       {/* </Link> */}

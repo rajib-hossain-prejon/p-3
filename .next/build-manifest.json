@@ -35,10 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/about/about-dark.js"
     ],
-    "/project-details2/[projectId]": [
+    "/contact/contact-dark": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/project-details2/[projectId].js"
+      "static/chunks/pages/contact/contact-dark.js"
     ]
   },
   "ampFirstPages": []
