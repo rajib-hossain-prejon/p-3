@@ -81,6 +81,7 @@ const SkillsCircle = ({ from, theme }) => {
                             <br />
                             <img
                               src={data.img}
+                              alt='Rajib Hossain Prejon Skills'
                               style={{
                                 width: '27px',
                                 border: '1px solid white',
