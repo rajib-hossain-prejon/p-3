@@ -16,6 +16,7 @@ const ProjectGallery = ({ projectGalleryData }) => {
               src={projectGalleryData[0]}
               height='600'
               width='600'
+              priority
             />
           </a>
           <a href='#' className='col-md-3 popimg'>
@@ -24,6 +25,7 @@ const ProjectGallery = ({ projectGalleryData }) => {
               src={projectGalleryData[1]}
               height='600'
               width='600'
+              priority
             />
           </a>
           <a href='#' className='col-md-3 popimg'>
@@ -32,6 +34,7 @@ const ProjectGallery = ({ projectGalleryData }) => {
               src={projectGalleryData[2]}
               height='600'
               width='600'
+              priority
             />
           </a>
           <a href='#' className='col-md-3 popimg'>
@@ -40,6 +43,7 @@ const ProjectGallery = ({ projectGalleryData }) => {
               src={projectGalleryData[3]}
               height='600'
               width='600'
+              priority
             />
           </a>
 

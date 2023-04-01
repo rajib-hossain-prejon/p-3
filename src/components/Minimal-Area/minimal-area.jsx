@@ -24,6 +24,7 @@ const MinimalArea = () => {
                 alt='About Rajib Hossain Prejon'
                 height='700'
                 width='700'
+                priority
               />
             </div>
           </div>

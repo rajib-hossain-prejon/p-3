@@ -16,6 +16,7 @@ const FreelancreIntro = () => {
                 src='/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon_lkzf2r.jpg'
                 alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
                 layout='fill'
+                priority
               ></Image>
             </div>
           </div>

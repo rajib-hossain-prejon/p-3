@@ -56,19 +56,72 @@ const WorksStyle4 = () => {
                         <p>{data.subtitle}</p>
                       </div>
                       {/* <Link href={`/project-details2/project-details2-dark`}> */}
-                      <a
-                        className='rota'
-                        onClick={() => window.open(data.live_link, '_blank')}
-                      >
-                        {/* <img src={data.img} alt='image' /> */}
-                        <Image
-                          src={data.img}
-                          alt='rajib hossain prejon projects'
-                          width='800'
-                          height='600'
-                        ></Image>
-                        <div className='item-img-overlay'></div>
-                      </a>
+
+                      {/* ---------------- Images Condition Starts --------------------------- */}
+
+                      {data.no_livelink ? (
+                        data.source_code_btn ? (
+                          <>
+                            <a
+                              className='rota'
+                              onClick={() =>
+                                window.open(data.live_link, '_blank')
+                              }
+                            >
+                              {/* <img src={data.img} alt='image' /> */}
+                              <Image
+                                src={data.img}
+                                alt='rajib hossain prejon projects'
+                                width='800'
+                                height='600'
+                                priority
+                              ></Image>
+                              <div className='item-img-overlay'></div>
+                            </a>
+                          </>
+                        ) : (
+                          <>
+                            {' '}
+                            <a
+                              className='rota'
+                              onClick={() => router.push(data.live_link)}
+                            >
+                              {/* <img src={data.img} alt='image' /> */}
+                              <Image
+                                src={data.img}
+                                alt='rajib hossain prejon projects'
+                                width='800'
+                                height='600'
+                                priority
+                              ></Image>
+                              <div className='item-img-overlay'></div>
+                            </a>
+                          </>
+                        )
+                      ) : (
+                        <>
+                          {' '}
+                          <a
+                            className='rota'
+                            onClick={() =>
+                              window.open(data.live_link, '_blank')
+                            }
+                          >
+                            {/* <img src={data.img} alt='image' /> */}
+                            <Image
+                              src={data.img}
+                              alt='rajib hossain prejon projects'
+                              width='800'
+                              height='600'
+                              priority
+                            ></Image>
+                            <div className='item-img-overlay'></div>
+                          </a>
+                        </>
+                      )}
+
+                      {/* ---------------- Images Condition End --------------------------- */}
+
                       {/* </Link> */}
                       <div className='tags'>
                         {data.no_livelink ? (

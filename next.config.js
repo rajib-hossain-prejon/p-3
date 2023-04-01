@@ -14,6 +14,6 @@ module.exports = {
   },
   images: {
     loader: 'cloudinary',
-    path: 'https://res.cloudinary.com/dllxgj3ac/image/upload/',
+    path: 'https://res.cloudinary.com/dllxgj3ac/image/upload/f_auto,q_auto',
   },
 };
