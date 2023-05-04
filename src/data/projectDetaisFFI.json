@@ -1,5 +1,51 @@
 [
   {
+    "id": 7,
+    "unique_id": "mobile-1-id-7-800x600-Sell-&-Smile",
+    "title": {
+      "small": "Turn Your Clutter into Cash with Our Intuitive Mobile App",
+      "big": "Sell & Smile - Mobile App"
+    },
+
+    "clientURLLink": "",
+    "projectHeaderImage": "https://res.cloudinary.com/dllxgj3ac/image/upload/v1679823060/rajibhossainprejon.com%28p3%29/project-details/cover/pexels-rahul-shah-5861187_bfkk5y.jpg",
+    "clientURLName": "Sell & Smile",
+    "date": "December 2022",
+    "categories": [
+      {
+        "id": 1,
+        "name": "Ecommerce",
+        "link": "#"
+      }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "React Native",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "name": "Node",
+        "link": "#"
+      }
+    ],
+    "intro": {
+      "content": "Introducing Sell & Smile, the revolutionary new mobile app that will change the way you sell your old and used products! Whether you're looking to clear out some clutter from your home or just want to make some extra cash, Sell & Smile is the perfect solution for you.",
+      "spmList": []
+    },
+    "gallery": [
+      "/v1683213771/rajibhossainprejon.com%28p3%29/project-details/mobile%20app/sell%20and%20smile%20-%20mobile%20app%20600x600%20-%20rajibhossainprejon.com/1._Sell_Smile_-_Mobile_App_-_600x600-rajibhossainprejon.com_yyrjs2.png",
+      "/v1683213770/rajibhossainprejon.com%28p3%29/project-details/mobile%20app/sell%20and%20smile%20-%20mobile%20app%20600x600%20-%20rajibhossainprejon.com/2._Sell_Smile_-_Mobile_App_-_600x600-rajibhossainprejon.com_b1sfcc.png",
+      "/v1683213770/rajibhossainprejon.com%28p3%29/project-details/mobile%20app/sell%20and%20smile%20-%20mobile%20app%20600x600%20-%20rajibhossainprejon.com/3._Sell_Smile_-_Mobile_App_-_600x600-rajibhossainprejon.com_upey4e.png",
+      "/v1683213773/rajibhossainprejon.com%28p3%29/project-details/mobile%20app/sell%20and%20smile%20-%20mobile%20app%20600x600%20-%20rajibhossainprejon.com/4._Sell_Smile_-_Mobile_App_-_600x600-rajibhossainprejon.com_cjgfaw.png"
+    ],
+    "description": {
+      "content": "With Sell & Smile, you can easily snap a photo of your old product and list it for sale in just a few taps. Our intuitive interface makes it easy to create a listing that showcases your item's best features and highlights its unique selling points. You can even set your own price and negotiate with potential buyers right within the app! But that's not all. Sell & Smile also offers a variety of other features to make selling your old products a breeze. You can chat with buyers and sellers to ask questions or arrange a meeting, keep track of your listings and transactions, and even get notifications when someone is interested in buying your item."
+    }
+  },
+
+  {
     "id": 13,
     "unique_id": "web-2-id-13-500x470-web-clinic",
     "title": {

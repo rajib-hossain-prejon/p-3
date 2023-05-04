@@ -1,25 +1,25 @@
-import React from "react";
-import Script from "next/script";
-import loadingPace from "../../common/loadingPace";
-import appData from "../../data/app.json";
+import Script from 'next/script';
+import React from 'react';
+import loadingPace from '../../common/loadingPace';
+import appData from '../../data/app.json';
 
 const LoadingScreen = () => {
   React.useEffect(() => {
-    let bodyEl = document.querySelector("body");
+    let bodyEl = document.querySelector('body');
     if (appData.showLoading) {
       loadingPace();
-      
-      if (bodyEl.classList.contains("hideX")) {
-        bodyEl.classList.remove("hideX");
+
+      if (bodyEl.classList.contains('hideX')) {
+        bodyEl.classList.remove('hideX');
       }
     } else {
-      bodyEl.classList.add("hideX");
+      bodyEl.classList.add('hideX');
     }
   });
   return (
     <>
-      <div className={`${appData.showLoading === true ? "showX" : "hideX"}`}>
-        <div className="loading">
+      <div className={`${appData.showLoading === true ? 'showX' : 'hideX'}`}>
+        <div className='loading'>
           <span>L</span>
           <span>o</span>
           <span>a</span>
@@ -28,16 +28,16 @@ const LoadingScreen = () => {
           <span>n</span>
           <span>g</span>
         </div>
-        <div id="preloader"></div>
+        <div id='preloader'></div>
       </div>
       {appData.showLoading ? (
         <Script
-          id="pace"
-          strategy="beforeInteractive"
-          src="/js/pace.min.js"
+          id='pace'
+          strategy='beforeInteractive'
+          src='/js/pace.min.js'
         ></Script>
       ) : (
-        ""
+        ''
       )}
     </>
   );

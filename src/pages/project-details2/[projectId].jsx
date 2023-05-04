@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/navbar';
 import Footer from '../../components/Footer/footer';
-import DarkTheme from '../../layouts/Dark';
+import Navbar from '../../components/Navbar/navbar';
 import ProjectDetails2Header from '../../components/Project-details2-header/project-details2-header';
+import DarkTheme from '../../layouts/Dark';
 // import ProjectDate from '../../data/project-details2.json';
-import ProjectDate1 from '../../data/projectDetaisFFI.json';
-import ProjectIntroduction from '../../components/Project-introduction/project-introduction';
-import ProjectGallery from '../../components/Project-gallery/project-gallery';
 import ProjectDescription from '../../components/Project-description/project-description';
+import ProjectGallery from '../../components/Project-gallery/project-gallery';
+import ProjectIntroduction from '../../components/Project-introduction/project-introduction';
+import ProjectDate1 from '../../data/projectDetaisFFI.json';
 // import ProjectVideo from '../../components/Project-video/project-video';
 // import NextProject from '../../components/Next-project/next-project';
 
