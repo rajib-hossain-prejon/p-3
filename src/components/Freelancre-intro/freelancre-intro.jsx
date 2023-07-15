@@ -1,30 +1,36 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import Typewriter from 'typewriter-effect';
-
 import Image from 'next/image';
+import React, { useContext } from 'react';
+import Typewriter from 'typewriter-effect';
+import { InfoData } from '../../context/context';
 
 const FreelancreIntro = () => {
+  const { info, setInfo } = useContext(InfoData);
+
   return (
     <header className='freelancre valign'>
       <div className='container'>
         <div className='row'>
           <div className='col-lg-4'>
             <div className='img'>
-              <Image
-                style={{ zIndex: -5 }}
-                src='/v1676207050/rajibhossainprejon.com%28p3%29/homepage/me/prejon_lkzf2r.jpg'
-                alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
-                layout='fill'
-                priority
-              ></Image>
+              {info && (
+                <Image
+                  style={{ zIndex: -5 }}
+                  src={info.heroImage}
+                  alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
+                  layout='fill'
+                  priority
+                />
+              )}
             </div>
           </div>
           {/* I have deleted className='valign' */}
           <div className='col-lg-8 '>
             <div className='cont'>
               <div>
-                <h3 className='cd-headline clip'>Hello, My name is</h3>
+                {info && (
+                  <h3 className='cd-headline clip'>{info.name.label}</h3>
+                )}
               </div>
               <br />
               <div>
@@ -32,48 +38,48 @@ const FreelancreIntro = () => {
                   style={{ fontSize: '32px', lineHeight: '38px' }}
                   className='cd-words-wrapper'
                 >
-                  <Typewriter
-                    options={{
-                      wrapperClassName: 'color-font-2 fw-600',
-                      strings: ['Rajib Hossain Prejon'],
-                      autoStart: true,
-                      loop: true,
-                    }}
-                    loop={true}
-                    onInit={(typewriter) => {
-                      typewriter;
-                    }}
-                  />
+                  {info && (
+                    <Typewriter
+                      options={{
+                        wrapperClassName: 'color-font-2 fw-600',
+                        strings: [info.name.title],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                      loop={true}
+                      onInit={(typewriter) => {
+                        typewriter;
+                      }}
+                    />
+                  )}
                 </h1>
               </div>
               <br />
-              <div style={{ fontSize: '20px', lineHeight: '55px' }}>
-                I Love To Develop
-              </div>
+              {info && (
+                <div style={{ fontSize: '20px', lineHeight: '55px' }}>
+                  {info.skills.label}
+                </div>
+              )}
 
               <div>
                 <h1
                   style={{ fontSize: '30px', lineHeight: '35px' }}
                   className='cd-words-wrapper'
                 >
-                  <Typewriter
-                    options={{
-                      wrapperClassName: 'color-font fw-400',
-                      strings: [
-                        'Web App',
-                        'Android App',
-                        'IOS APP',
-                        'Frontend',
-                        'Backend',
-                      ],
-                      autoStart: true,
-                      loop: true,
-                    }}
-                    loop={true}
-                    onInit={(typewriter) => {
-                      typewriter;
-                    }}
-                  />
+                  {info && (
+                    <Typewriter
+                      options={{
+                        wrapperClassName: 'color-font fw-400',
+                        strings: info.skills.titles,
+                        autoStart: true,
+                        loop: true,
+                      }}
+                      loop={true}
+                      onInit={(typewriter) => {
+                        typewriter;
+                      }}
+                    />
+                  )}
                 </h1>
               </div>
             </div>

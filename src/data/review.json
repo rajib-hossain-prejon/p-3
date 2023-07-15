@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Tamim Mahmud",
+    "position": "",
+    "location": "Czech Republic",
+    "review": "Great experience working with this agency. They were very professional and delivered high-quality work on time.",
+    "img": ""
+  },
+  {
+    "id": 2,
+    "name": "Adhir Hossain",
+    "position": "Marketing Manager, XYZ Corp.",
+    "location": "Italy",
+    "review": "I was impressed with the digital marketing strategies they proposed and implemented for our company. We saw a significant increase in traffic and leads.",
+    "img": ""
+  },
+  {
+    "id": 3,
+    "name": "Rinco",
+    "position": "",
+    "location": "Germany",
+    "review": "Their full-stack web development team was able to build a complex web application that met all our requirements. I would highly recommend them.",
+    "img": ""
+  },
+  {
+    "id": 4,
+    "name": "Nafiz Ahmed Siam",
+    "position": "",
+    "location": "Bangladesh",
+    "review": "The frontend design they created for our website was engaging and visually stunning. It helped us stand out from our competitors",
+    "img": ""
+  },
+  {
+    "id": 5,
+    "name": "Xinia Rahman",
+    "position": "",
+    "location": "Germany",
+    "review": "Their expertise in django helped us develop a secure and scalable platform for our cryptocurrency exchange.",
+    "img": ""
+  },
+  {
+    "id": 6,
+    "name": "Jules P",
+    "position": "",
+    "location": "United States",
+    "review": "Amazing! The best agency I have come across. very professional and they knows what they are doing..",
+    "img": ""
+  },
+  {
+    "id": 7,
+    "name": "Anisa Akter",
+    "position": "",
+    "location": "Germany",
+    "review": "I needed a new mobile app for my business and they delivered a high-quality native Android app that my customers love using.",
+    "img": ""
+  }
+]

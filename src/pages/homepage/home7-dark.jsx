@@ -1,23 +1,25 @@
-import React from 'react';
-import Navbar from '../../components/Navbar/navbar';
+import React, { useContext } from 'react';
 import Footer from '../../components/Footer/footer';
-import DarkTheme from '../../layouts/Dark';
 import FreelancreIntro from '../../components/Freelancre-intro/freelancre-intro';
+import Navbar from '../../components/Navbar/navbar';
 import Services5 from '../../components/Services5/services5';
-import WorksStyle4 from '../../components/Works-style4/works-style4';
-import AboutUs5 from '../../components/About-us5/about-us5';
-import FullTestimonials from '../../components/Full-testimonials/full-testimonials';
-import Blogs2 from '../../components/blogs/Blogs2/blogs2';
+import Testimonials from '../../components/Testimonials-arch/testimonials-arch';
+import WorksStyle3 from '../../components/Works-style3/works-style3';
 import SContactForm from '../../components/s-contact-form/s-contact-form';
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import { InfoData } from '../../context/context';
+import DarkTheme from '../../layouts/Dark';
 
 const Homepage = () => {
+  const { info, setInfo } = useContext(InfoData);
+
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-
+  console.log('Got Info: ', info);
+  if (info) {
+    Object.keys(info).forEach((key) => {
+      console.log(key + ':', info[key]);
+    });
+  }
   React.useEffect(() => {
     var navbar = navbarRef.current;
     if (window.pageYOffset > 300) {
@@ -33,13 +35,33 @@ const Homepage = () => {
       }
     });
   }, [navbarRef]);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [imageUrl, setImageUrl] = React.useState('');
+
+  const handleButtonClick = () => {
+    // Set the image URL and open the modal
+    setImageUrl('/img/certificates/certificate-1.jpg');
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    // Close the modal
+    setIsModalOpen(false);
+  };
+
   return (
     <DarkTheme>
-     
       <Navbar nr={navbarRef} lr={logoRef} />
       <FreelancreIntro />
+
       <Services5 />
-      <WorksStyle4 />
+
+      {/* <WorksStyle4 /> */}
+      <WorksStyle3 />
+      {/* <VideoWithTestimonials />
+      <SkillsCircle2 /> */}
+      <Testimonials />
+
       {/* <AboutUs5  /> */}
       {/* <FullTestimonials showHead />
       <Blogs2 /> */}

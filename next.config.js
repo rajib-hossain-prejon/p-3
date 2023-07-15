@@ -13,7 +13,7 @@ module.exports = {
     ignoreDuringBuilds: false,
   },
   images: {
-    loader: 'cloudinary',
-    path: 'https://res.cloudinary.com/dllxgj3ac/image/upload/f_auto,q_auto',
+      domains: ['res.cloudinary.com','firebasestorage.googleapis.com'],
+    
   },
 };

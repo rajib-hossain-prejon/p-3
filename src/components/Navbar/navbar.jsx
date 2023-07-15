@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
+import { handleMobileDropdown } from '../../common/navbar';
 import appData from '../../data/app.json';
-import { useRouter } from 'next/router';
-import { handleDropdown, handleMobileDropdown } from '../../common/navbar';
 
 const Navbar = ({ lr, nr, theme }) => {
   return (
@@ -19,14 +18,14 @@ const Navbar = ({ lr, nr, theme }) => {
             {theme ? (
               theme === 'themeL' ? (
                 <img
-                  style={{ width: '110px' }}
+                  style={{ width: '400px', cursor: 'pointer' }}
                   ref={lr}
                   src={appData.darkLogo}
                   alt='logo'
                 />
               ) : (
                 <img
-                  style={{ width: '110px' }}
+                  style={{ width: '400px' }}
                   ref={lr}
                   src={appData.lightLogo}
                   alt='logo'
@@ -73,7 +72,7 @@ const Navbar = ({ lr, nr, theme }) => {
             </li>
 
             <li className='nav-item'>
-              <Link href='#projects'>
+              <Link href={`/projects`}>
                 <a className='nav-link'>Projects</a>
               </Link>
             </li>
@@ -136,13 +135,18 @@ const Navbar = ({ lr, nr, theme }) => {
             
             </li> */}
             <li className='nav-item'>
-              <Link href={`/about/about-dark`}>
-                <a className='nav-link'>More About Me</a>
+              <Link href={`/about`}>
+                <a className='nav-link'>Details</a>
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link href={`/blog-grid/blog-grid-dark`}>
+                <a className='nav-link'>Blogs</a>
               </Link>
             </li>
 
             <li className='nav-item'>
-              <Link href={`/contact/contact-dark`}>
+              <Link href={`/contact`}>
                 <a className='nav-link'>Contact</a>
               </Link>
             </li>

@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  CircularProgressbar,
-  buildStyles,
-  CircularProgressbarWithChildren,
-} from 'react-circular-progressbar';
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 import skillsData from '../../data/sections/skills.json';
@@ -57,7 +53,7 @@ const SkillsCircle = ({ from, theme }) => {
                         styles={cpStyle}
                       /> */}
                         <CircularProgressbarWithChildren
-                          value={data.percantage}
+                          value={100}
                           strokeWidth={2}
                           styles={cpStyle}
                         >

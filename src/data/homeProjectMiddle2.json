@@ -1,0 +1,22 @@
+[
+  {
+    "id": 14,
+    "unique_id": "web-3-id-14-800x800-proshop-demo/",
+    "title": "Eccomerce",
+    "category": "Web Development",
+    "className": "web",
+    "img": "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_800,h_800,c_scale/v1677745903/futureflowit.com/projects/1.%20Web%20Projects/3.%20Web_ecommerce/5._800x800_zhxuhe.png",
+    "link": "/project-details2/web-3-id-14-800x800-proshop-demo/",
+    "resolution": "800*800"
+  },
+  {
+    "id": 2,
+    "unique_id": "mobile-app-2-500x470-imax-player",
+    "title": "IMAX Player",
+    "category": "Mobile App",
+    "className": "mobile",
+    "img": "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_800,h_400,c_scale/v1677742321/futureflowit.com/projects/projects-800%2A400/imx_2_t236mt.png",
+    "link": "/project-details2/mobile-app-2-500x470-imax-player",
+    "resolution": "800*400"
+  }
+]

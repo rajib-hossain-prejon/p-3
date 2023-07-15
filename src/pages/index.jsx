@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Homepage from './homepage/home7-dark';
 import Head from 'next/head';
+
+import Homepage from './homepage/home7-dark';
 const Home = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const Home = () => {
           Rajib Hossain Prejon - Expert Full-Stack Web & Mobile App Developer
         </title>
       </Head>
+
       <Homepage></Homepage>
     </>
   );

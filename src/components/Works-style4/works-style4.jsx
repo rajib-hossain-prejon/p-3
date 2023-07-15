@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import Link from 'next/link';
-import initIsotope from '../../common/initIsotope';
 import { useRouter } from 'next/router';
+import React from 'react';
+import initIsotope from '../../common/initIsotope';
 
-import projectsData from '../../data/sections/projects.json';
 import Image from 'next/image';
+import projectsData from '../../data/sections/projects.json';
 
 const WorksStyle4 = () => {
   const router = useRouter();
@@ -36,9 +35,9 @@ const WorksStyle4 = () => {
               <span data-filter='*' className='active'>
                 All
               </span>
-              {/* <span data-filter='.brand'>Branding</span>
-              <span data-filter='.web'>Mobile App</span>
-              <span data-filter='.graphic'>Creative</span> */}
+              {/* <span data-filter='.brand'>Branding</span> */}
+              <span data-filter='.web'>Web App</span>
+              <span data-filter='.mobile'>Mobile App</span>
             </div>
           </div>
 

@@ -1,7 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-
-import styles from '../../styles/ProjectNotFound.module.css';
+import React from 'react';
 
 const ProjectNotFound = () => {
   return (
@@ -26,7 +24,7 @@ const ProjectNotFound = () => {
       <h6>Please, browse another project!</h6>
       <br />
       <h3>Thank You!</h3>
-      <br />
+      <br />  
       <Link href='/'>
         <a style={{ fontSize: '1.5rem' }}>Go back to the home page</a>
       </Link>
