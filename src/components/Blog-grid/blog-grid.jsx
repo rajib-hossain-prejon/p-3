@@ -7,7 +7,7 @@ import React from 'react';
 import dbs from '../../api/dbs';
 import storage from '../../context/storage';
 
-const   BlogGrid = ({ blogs, blogsImage, currentPage, postsPerPage }) => {
+const BlogGrid = ({ blogs, blogsImage, currentPage, postsPerPage }) => {
   const router = useRouter();
   // Calculate the index of the first and last post for the current page
   const indexOfLastPost = currentPage * postsPerPage;

@@ -5,7 +5,7 @@ import Loader from "../../components/Loader/loader";
 import { InfoData } from "../context";
 import Storage from "../storage";
 import useInfo from "./useInfo";
-
+  
 
 
  

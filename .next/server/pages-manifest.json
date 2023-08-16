@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/project-details2/[projectId]": "pages/project-details2/[projectId].js"
+  "/blog-details/[blogId]": "pages/blog-details/[blogId].js",
+  "/404": "pages/404.js",
+  "/blog-grid/blogPage": "pages/blog-grid/blogPage.js"
 }
