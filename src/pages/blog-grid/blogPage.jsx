@@ -6,7 +6,6 @@ import BlogGrid from '../../components/Blog-grid/blog-grid.jsx';
 import Footer from '../../components/Footer/footer.jsx';
 import Navbar from '../../components/Navbar/navbar.jsx';
 import PageHeader from '../../components/Page-header/page-header.jsx';
-import TryAgain from '../../components/Try-Again/try-again.jsx';
 import DarkTheme from '../../layouts/Dark.jsx';
 
 export async function getStaticProps() {
@@ -53,10 +52,6 @@ const BlogGridDark = ({ blogs, error, blogsImage }) => {
 
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-
-  if (error) {
-    return <TryAgain />;
-  }
 
   React.useEffect(() => {
     var navbar = navbarRef.current,

@@ -7,7 +7,6 @@ import ProjectDescription from '../../components/Project-description/project-des
 import ProjectDetails2Header from '../../components/Project-details2-header/project-details2-header';
 import ProjectGallery from '../../components/Project-gallery/project-gallery';
 import ProjectIntroduction from '../../components/Project-introduction/project-introduction';
-import TryAgain from '../../components/Try-Again/try-again';
 import DarkTheme from '../../layouts/Dark';
 // import ProjectVideo from '../../components/Project-video/project-video';
 // import NextProject from '../../components/Next-project/next-project';
@@ -80,10 +79,6 @@ const ProjectDetails = ({ project, error }) => {
     title,
     technologies,
   };
-
-  if (error) {
-    return <TryAgain />;
-  }
 
   React.useEffect(() => {
     var navbar = navbarRef.current,

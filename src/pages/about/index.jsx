@@ -10,7 +10,6 @@ import PagesHeader from '../../components/Pages-header';
 import Services5 from '../../components/Services5/services5';
 import ShowCase from '../../components/Showcases-full-screen/showcases-full-screen';
 import SkillsCircle from '../../components/Skills-circle/skills-circle';
-import TryAgain from '../../components/Try-Again/try-again';
 import DarkTheme from '../../layouts/Dark';
 
 export async function getStaticProps() {
@@ -64,10 +63,6 @@ const About = ({
 }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-
-  if (error) {
-    return <TryAgain />;
-  }
 
   React.useEffect(() => {
     var navbar = navbarRef.current,

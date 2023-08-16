@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import dbs from '../../api/dbs';
 import getData from '../../api/getData';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/Navbar/navbar';
-import TryAgain from '../../components/Try-Again/try-again';
 import WorksHeader from '../../components/Works-header/works-header';
 import WorksStyle2 from '../../components/Works-style2/works-style2';
 import DarkTheme from '../../layouts/Dark';
@@ -29,11 +28,8 @@ const WorksDark = ({ projects, error }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
-  if (error) {
-    return <TryAgain />;
-  }
-
-  useEffect(() => {
+  
+  React.useEffect(() => {
     setInterval(() => {
       if (fixedHeader.current) {
         var slidHeight = fixedHeader.current.offsetHeight;

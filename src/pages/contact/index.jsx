@@ -6,7 +6,6 @@ import ContactForm from '../../components/Contact-form/contact-form';
 import ContactHeader from '../../components/Contact-header/contact-header';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/Navbar/navbar';
-import TryAgain from '../../components/Try-Again/try-again';
 import DarkTheme from '../../layouts/Dark';
 
 export async function getStaticProps() {
@@ -29,10 +28,6 @@ export async function getStaticProps() {
 const Contact = ({ info, error }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-
-  if (error) {
-    return <TryAgain />;
-  }
 
   React.useEffect(() => {
     document.querySelector('body').classList.add('contact-page');

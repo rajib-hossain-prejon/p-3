@@ -8,7 +8,6 @@ import DarkTheme from '../../layouts/Dark';
 import { useRouter } from 'next/router';
 import dbs from '../../api/dbs';
 import getData from '../../api/getData';
-import TryAgain from '../../components/Try-Again/try-again';
 import storage from '../../context/storage';
 
 export async function getStaticPaths() {
@@ -73,10 +72,6 @@ const BlogDetailsDark = ({ blog, blogId, error }) => {
 
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-
-  if (error) {
-    return <TryAgain />;
-  }
 
   React.useEffect(() => {
     var navbar = navbarRef.current,
