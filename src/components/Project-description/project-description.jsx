@@ -17,10 +17,10 @@ const ProjectDescription = ({ projectDescriptionData }) => {
               <p className='extra-text'>{projectDescriptionData.content}</p>
               <ul className='smp-list mt-30'>
                 {projectDescriptionData.spmList &&
-                  projectDescriptionData.spmList.map((item) => (
-                    <li key={item.id}>
+                  projectDescriptionData.spmList.map((item, index) => (
+                    <li key={index}>
                       <b style={{ color: '#BB73EC' }}>{item.title}</b> :{' '}
-                      {item.name}
+                      {item.description}
                     </li>
                   ))}
               </ul>

@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
 import React from 'react';
 
-const BlogDetails = ({ theme }) => {
+const BlogDetails = ({ theme, blog }) => {
   const messageRef = React.useRef(null);
   function validateEmail(value) {
     let error;
@@ -28,19 +27,13 @@ const BlogDetails = ({ theme }) => {
                 <div className='row justify-content-center'>
                   <div className='col-lg-10'>
                     <div className='cont'>
-                      <h4 className='extra-title'>
-                        Priorities that will pop up in any particular month.
-                      </h4>
+                      {blog?.title && (
+                        <h4 className='extra-title'>{blog.title}</h4>
+                      )}
                       <div className='spacial'>
-                        <p>
-                          Never ever think of giving up. Winners never quit and
-                          quitters never win. Take all negative words out of
-                          your mental dictionary and focus on the solutions with
-                          utmost conviction and patience. The battle is never
-                          lost until you’ve abandon your vision.
-                        </p>
+                        {blog?.description && <p>{blog.description}</p>}
                       </div>
-                      <p>
+                      {/* <p>
                         the main component of a healthy environment for self
                         esteem is that it needs be nurturing. The main compont
                         of a healthy environment for self esteem is that it
@@ -49,9 +42,9 @@ const BlogDetails = ({ theme }) => {
                         provide unconditional warmth. The main component of a
                         healthy env for self esteem The main compont be
                         nurturing It should provide unconditional
-                      </p>
+                      </p> */}
 
-                      <h6>- We all intend to plan ahead.</h6>
+                      {/* <h6>- We all intend to plan ahead.</h6>
 
                       <p>
                         We all intend to plan ahead, but too often let the
@@ -61,9 +54,9 @@ const BlogDetails = ({ theme }) => {
                         that will pop up in any particular month. But you can
                         plan for big picture seasonality, busy-times, and
                         events.
-                      </p>
+                      </p> */}
 
-                      <ul>
+                      {/* <ul>
                         <li>
                           <span>01</span> Integer in volutpat libero.
                         </li>
@@ -81,16 +74,10 @@ const BlogDetails = ({ theme }) => {
                           <span>05</span> The main component of a healthy env
                           for self esteem.
                         </li>
-                      </ul>
+                      </ul> */}
 
                       <div className='quotes text-center'>
-                        <p>
-                          Never ever think of giving up. Winners never quit and
-                          quitters never win. Take all negative words out of
-                          your mental dictionary and focus on the solutions with
-                          utmost conviction and patience. The battle is never
-                          lost until you’ve abandon your vision.
-                        </p>
+                        {blog?.quote && <p>{blog.quote}</p>}
                       </div>
                       {/* <div className='row'>
                         <div className='col-md-6'>
@@ -161,7 +148,7 @@ const BlogDetails = ({ theme }) => {
                 </div>
               </div>
 
-              <div className='pagination'>
+              {/* <div className='pagination'>
                 <span>
                   <a href='#0'>Prev Post</a>
                 </span>
@@ -175,7 +162,7 @@ const BlogDetails = ({ theme }) => {
                 <span className='text-right'>
                   <a href='#0'>Next Post</a>
                 </span>
-              </div>
+              </div> */}
 
               {/* <div className='comments-area'>
                 <h5>Comments :</h5>

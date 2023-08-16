@@ -1,12 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 const ProjectDetails2Header = ({ projectHeaderData }) => {
   return (
     <section
       className='page-header proj-det bg-img parallaxie valign'
       style={{
-        backgroundImage: `url(${projectHeaderData.projectHeaderImage})`,
+        backgroundImage: `url('${projectHeaderData.imageProjectDetailsHeader.src}')`,
       }}
       data-overlay-dark='4'
     >
@@ -14,10 +14,10 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
         <div className='row'>
           <div className='col-lg-7 col-md-9'>
             <div className='cont'>
-              <h6>{projectHeaderData.title.small}</h6>
-              <h2>{projectHeaderData.title.big}</h2>
+              <h6>{projectHeaderData.subTitle}</h6>
+              <h2>{projectHeaderData.title}</h2>
               <br />
-              {projectHeaderData.btn && (
+              {projectHeaderData.clientURLLink && (
                 <button
                   className='butn bord'
                   style={{ backgroundColor: '#08ec89', color: 'white' }}
@@ -52,9 +52,9 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
               <h6>Categories</h6>
               <p>
                 {projectHeaderData.categories.map((cat, index) => (
-                  <Link href={cat.link} key={cat.id}>
+                  <Link href={cat.link} key={index}>
                     <a>
-                      {cat.name}
+                      {cat.title}
                       {projectHeaderData.categories.length != index + 1
                         ? ' ,'
                         : ''}
@@ -68,11 +68,13 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
             <div className='item mt-30'>
               <h6>Technology</h6>
               <p>
-                {projectHeaderData.tags.map((tag, index) => (
-                  <Link href={tag.link} key={tag.id}>
+                {projectHeaderData.technologies.map((technology, index) => (
+                  <Link href={technology.link} key={index}>
                     <a>
-                      {tag.name}
-                      {projectHeaderData.tags.length != index + 1 ? ' ,' : ''}
+                      {technology.title}
+                      {projectHeaderData.technologies.length != index + 1
+                        ? ' ,'
+                        : ''}
                     </a>
                   </Link>
                 ))}

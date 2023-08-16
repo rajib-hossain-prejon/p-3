@@ -1,28 +1,89 @@
 import React from 'react';
+import dbs from '../../api/dbs';
+import getData from '../../api/getData';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/Navbar/navbar';
-import ProjectDetails2Header from '../../components/Project-details2-header/project-details2-header';
-import DarkTheme from '../../layouts/Dark';
-// import ProjectDate from '../../data/project-details2.json';
 import ProjectDescription from '../../components/Project-description/project-description';
+import ProjectDetails2Header from '../../components/Project-details2-header/project-details2-header';
 import ProjectGallery from '../../components/Project-gallery/project-gallery';
 import ProjectIntroduction from '../../components/Project-introduction/project-introduction';
-import ProjectDate1 from '../../data/projectDetaisFFI.json';
+import TryAgain from '../../components/Try-Again/try-again';
+import DarkTheme from '../../layouts/Dark';
 // import ProjectVideo from '../../components/Project-video/project-video';
 // import NextProject from '../../components/Next-project/next-project';
 
-import { useRouter } from 'next/router';
-import ProjectNotFound from '../../components/Project-not-found/project-not-found';
+export async function getStaticPaths() {
+  const projects = await getData.getListingsFromFirebase(dbs.PROJECTS);
 
-const ProjectDetails2Dark = () => {
+  const paths = projects.map((project) => {
+    const projectId = project.id.toString();
+
+    return {
+      params: { projectId: projectId },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(context) {
+  const projectId = context.params.projectId;
+
+  try {
+    const project = await getData.getListingByIdFromFirebase(
+      dbs.PROJECTS,
+      projectId
+    );
+
+    return {
+      props: {
+        project: project,
+      },
+      revalidate: 3600,
+    };
+  } catch (error) {
+    return { props: { error: true }, revalidate: 3600 };
+  }
+}
+
+const ProjectDetails = ({ project, error }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
-  const router = useRouter();
-  const id = router.query.projectId;
+  const {
+    category,
+    categories,
+    clientURLName,
+    clientURLLink,
+    date,
+    description,
+    imageProjectDetailsHeader,
+    imagesGallery,
+    intro,
+    subTitle,
+    title,
+    technologies,
+    videoLink,
+  } = project;
 
-  // find the project with the matching id
-  const ProjectDate = ProjectDate1.find((project) => project.unique_id === id);
+  const projectHeader = {
+    category,
+    categories,
+    clientURLLink,
+    clientURLName,
+    date,
+    imageProjectDetailsHeader,
+    subTitle,
+    title,
+    technologies,
+  };
+
+  if (error) {
+    return <TryAgain />;
+  }
 
   React.useEffect(() => {
     var navbar = navbarRef.current,
@@ -45,19 +106,12 @@ const ProjectDetails2Dark = () => {
     <DarkTheme>
       <Navbar nr={navbarRef} lr={logoRef} />
       <div className='wrapper'>
-        {!ProjectDate ? (
-          <ProjectNotFound></ProjectNotFound>
-        ) : (
-          <>
-            <ProjectDetails2Header projectHeaderData={ProjectDate} />
+        <ProjectDetails2Header projectHeaderData={projectHeader} />
 
-            <ProjectIntroduction projectIntroductionData={ProjectDate.intro} />
-            <ProjectGallery projectGalleryData={ProjectDate.gallery} />
-            <ProjectDescription
-              projectDescriptionData={ProjectDate.description}
-            />
-          </>
-        )}
+        <ProjectIntroduction projectIntroductionData={intro} />
+        <ProjectGallery projectGalleryData={imagesGallery} />
+        <ProjectDescription projectDescriptionData={description} />
+
         {/* <ProjectVideo projectVideoDate={ProjectDate} /> */}
         {/* <NextProject />  */}
         <Footer />
@@ -66,4 +120,4 @@ const ProjectDetails2Dark = () => {
   );
 };
 
-export default ProjectDetails2Dark;
+export default ProjectDetails;

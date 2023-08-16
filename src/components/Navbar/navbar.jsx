@@ -25,7 +25,7 @@ const Navbar = ({ lr, nr, theme }) => {
                 />
               ) : (
                 <img
-                  style={{ width: '400px' }}
+                  style={{ width: '110px' }}
                   ref={lr}
                   src={appData.lightLogo}
                   alt='logo'
@@ -65,11 +65,11 @@ const Navbar = ({ lr, nr, theme }) => {
               </Link>
             </li>
 
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link href='#services'>
                 <a className='nav-link'>Services</a>
               </Link>
-            </li>
+            </li> */}
 
             <li className='nav-item'>
               <Link href={`/projects`}>
@@ -140,8 +140,14 @@ const Navbar = ({ lr, nr, theme }) => {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link href={`/blog-grid/blog-grid-dark`}>
+              <Link href={`/blog-grid/blogPage?page=1`}>
                 <a className='nav-link'>Blogs</a>
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link href={`/projectPass`}>
+                <a className='nav-link'>Your Project</a>
               </Link>
             </li>
 

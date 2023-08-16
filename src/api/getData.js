@@ -1,17 +1,72 @@
 // import client from "./client";
 
 
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
 import { db } from "../config/firebase/firebase";
 
-const infoRef = collection(db, 'info');
 
-const getListingsFromFirebase = async () => {
+
+
+
+const getListingsFromFirebase = async (refName,id) => {
+  let ref ;
+ref  = collection(db, refName);
+if(id != null){
   
-  const data1 = await getDocs(infoRef);
+  ref  = collection(db, refName,id);
+}
+
+  const data1 = await getDocs(ref);
   const filteredData = data1.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-  console.log('dare');
+  
   return filteredData;
+};
+
+const getListingByIdFromFirebase = async (refName, id) => {
+  const ref = doc(collection(db, refName), id);
+
+  const docSnap = await getDoc(ref);
+  if (docSnap.exists()) {
+    return { ...docSnap.data(), id: docSnap.id };
+  } else {
+    return null; // Document with the given ID not found
+  }
+};
+
+
+const getListingDetailsFromFirebase = async (projectRefPath) => {
+  
+
+  try {
+    
+    const projectSnapshot = await getDoc(doc(db, projectRefPath));
+
+    if (projectSnapshot.exists()) {
+      const projectData = projectSnapshot.data();
+      // Now you have the data for the project
+      console.log('Project Data:', projectData);
+    } else {
+      console.log('Project does not exist.');
+    }
+  } catch (error) {
+    console.error('Error fetching project data:', error);
+  }
+
+
+  // ----------- Bek ---------------
+
+
+//   let ref ;
+// ref  = collection(db, refName);
+// if(id != null){
+  
+//   ref  = collection(db, refName,id);
+// }
+
+//   const data1 = await getDocs(ref);
+//   const filteredData = data1.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  
+//   return filteredData;
 };
 
 const getMyListingsFromFirebase = async (currentUserID) => {
@@ -61,7 +116,7 @@ return results;
 
 
 export default {
-  getListingsFromFirebase, getMyListingsFromFirebase, getListingsFromFirebaseBySearch
+  getListingsFromFirebase,getListingByIdFromFirebase, getListingDetailsFromFirebase, getMyListingsFromFirebase, getListingsFromFirebaseBySearch
 }
 
 

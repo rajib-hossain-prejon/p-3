@@ -22,7 +22,7 @@ const Loader = () => {
       <Lottie
         animationData={LoaderLottie}
         loop={true}
-        style={{ height: '20vh' }}
+        style={{ height: '8vh' }}
       />
     </div>
   );

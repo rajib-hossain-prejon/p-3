@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import dbs from '../../api/dbs';
+import getData from '../../api/getData';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/Navbar/navbar';
+import TryAgain from '../../components/Try-Again/try-again';
 import WorksHeader from '../../components/Works-header/works-header';
 import WorksStyle2 from '../../components/Works-style2/works-style2';
 import DarkTheme from '../../layouts/Dark';
 
-const WorksDark = () => {
+export async function getStaticProps() {
+  try {
+    const projects = await getData.getListingsFromFirebase(dbs.PROJECTS);
+
+    return {
+      props: {
+        projects,
+      },
+      revalidate: 3600,
+    };
+  } catch (error) {
+    return { props: { error: true }, revalidate: 3600 };
+  }
+}
+
+const WorksDark = ({ projects, error }) => {
   const fixedHeader = React.useRef(null);
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
-  React.useEffect(() => {
+  if (error) {
+    return <TryAgain />;
+  }
+
+  useEffect(() => {
     setInterval(() => {
       if (fixedHeader.current) {
         var slidHeight = fixedHeader.current.offsetHeight;
@@ -46,7 +68,7 @@ const WorksDark = () => {
       <Navbar nr={navbarRef} lr={logoRef} />
       <WorksHeader sliderRef={fixedHeader} />
       <div ref={MainContent} className='main-content'>
-        <WorksStyle2 grid={3} filterPosition='center' />
+        <WorksStyle2 grid={3} projects={projects} filterPosition='center' />
         <Footer />
       </div>
     </DarkTheme>

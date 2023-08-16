@@ -84,6 +84,26 @@ img {
   height: auto;
 }
 
+/* ---------- Custom CSS --------------- */
+
+image-preview {
+  max-width: 50px;
+  max-height: 50px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-preview.hidden {
+  opacity: 0;
+}
+
+.z-index-minus {
+  z-index: -5; /* Adjust the value as needed */
+}
+
+/* 
+--------------- End Custom Css ----- */
+
 span,
 a,
 a:hover {

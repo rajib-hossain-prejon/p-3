@@ -1,7 +1,8 @@
 import React from 'react';
-import featuresData from '../../data/sections/features.json';
 
-const Services5 = () => {
+const Services5 = ({ servicesData }) => {
+  const { title, subTitle, services } = servicesData || {};
+
   return (
     <section
       className='services box lficon section-padding position-re'
@@ -11,15 +12,17 @@ const Services5 = () => {
         <div className='row justify-content-center'>
           <div className='col-lg-8 col-md-10'>
             <div className='sec-head  text-center'>
-              <h6 className='wow fadeIn' data-wow-delay='.5s'>
-                Services
-              </h6>
-              <h3 className='wow color-font'>What Services I offer You</h3>
+              {title && (
+                <h6 className='wow fadeIn' data-wow-delay='.5s'>
+                  {title}
+                </h6>
+              )}
+              {subTitle && <h3 className='wow color-font'>{subTitle}</h3>}
             </div>
           </div>
         </div>
         <div className='row'>
-          {featuresData.map((item, index) => (
+          {services?.map((item, index) => (
             <div
               className='col-lg-6 wow fadeInLeft'
               data-wow-delay={
@@ -31,7 +34,7 @@ const Services5 = () => {
                   ? '.9s'
                   : '.5s'
               }
-              key={item.id}
+              key={index}
             >
               <div className='item-box no-curve'>
                 <div>
@@ -39,7 +42,7 @@ const Services5 = () => {
                 </div>
                 <div className='cont'>
                   <h6>{item.title}</h6>
-                  <p>{item.content}</p>
+                  <p>{item.description}</p>
                 </div>
               </div>
             </div>

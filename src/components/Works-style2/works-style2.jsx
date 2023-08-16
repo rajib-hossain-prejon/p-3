@@ -1,14 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
+import Image from 'next/image';
+
+import { useRouter } from 'next/router';
 import React from 'react';
 import initIsotope from '../../common/initIsotope';
 
-import ProjectsData from '../../data/projectsPage.json';
-
 import { shuffle } from 'lodash';
-import Image from 'next/image';
 
-const WorksStyle2 = ({ grid, hideFilter, filterPosition }) => {
+const WorksStyle2 = ({ grid, projects, hideFilter, filterPosition }) => {
+  const router = useRouter();
+
+  function sendProps(selectedProject) {
+    router.push(`/project-details2/${selectedProject.id}`);
+  }
+
   React.useEffect(() => {
     setTimeout(() => {
       initIsotope();
@@ -54,14 +59,13 @@ const WorksStyle2 = ({ grid, hideFilter, filterPosition }) => {
                 </span>
                 <span data-filter='.web'>Web</span>
                 <span data-filter='.mobile'>Mobile App</span>
-                <span data-filter='.dms'>Digital Marketing & Seo</span>
               </div>
             </div>
           )}
 
           <div className='gallery full-width'>
-            {ProjectsData &&
-              shuffle(ProjectsData).map((project) => {
+            {projects &&
+              shuffle(projects).map((project, index) => {
                 return (
                   <div
                     className={`${
@@ -72,30 +76,27 @@ const WorksStyle2 = ({ grid, hideFilter, filterPosition }) => {
                         : 'col-12'
                     } items ${project.className} wow fadeInUp`}
                     data-wow-delay='.4s'
-                    key={project.id}
+                    key={index}
+                    style={{ cursor: 'pointer' }}
                   >
                     <div className='item-img'>
-                      <Link href={project.link}>
-                        <a className='imago wow'>
-                          <Image
-                            src={project.img}
-                            alt='image'
-                            width={800}
-                            height={1000}
-                            priority
-                          />
-                          <div className='item-img-overlay'></div>
-                        </a>
-                      </Link>
+                      <a
+                        className='imago wow'
+                        onClick={() => sendProps(project)}
+                      >
+                        <Image
+                          src={project.imageProjectPageCover.src}
+                          alt={project.imageProjectPageCover.alt}
+                          width={800}
+                          height={1000}
+                          priority
+                        />
+                        <div className='item-img-overlay'></div>
+                      </a>
                     </div>
                     <div className='cont'>
                       <h6>{project.title}</h6>
-                      <span>
-                        <Link href='/works3/works3-dark'>
-                          {project.category}
-                        </Link>
-                        {/* ,<Link href='/works3/works3-dark'>WordPress</Link> */}
-                      </span>
+                      <span>{project.category}</span>
                     </div>
                   </div>
                 );

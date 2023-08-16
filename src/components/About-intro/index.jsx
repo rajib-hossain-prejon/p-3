@@ -1,8 +1,8 @@
 import React from 'react';
 import Split from '../Split';
-import AboutInfo1Data from '../../data/sections/about-info1.json';
+// import AboutInfo1Data from '../../data/sections/about-info1.json';
 
-const AboutIntro = () => {
+const AboutIntro = ({ AboutInfo1Data }) => {
   return (
     <section
       className='intro-section section-padding pb-0 mb-20'
@@ -12,7 +12,7 @@ const AboutIntro = () => {
         <div className='row'>
           <div className='col-lg-3 col-md-4'>
             <div className='htit sm-mb30'>
-              <h4>{AboutInfo1Data.title}</h4>
+              <h4>{AboutInfo1Data?.title}</h4>
             </div>
           </div>
           <div className='col-lg-8 offset-lg-1 col-md-8'>
@@ -22,10 +22,10 @@ const AboutIntro = () => {
                   className='wow txt mb-10 words chars splitting'
                   data-splitting
                 >
-                  {AboutInfo1Data.paragraph1}
+                  {AboutInfo1Data?.description1}
                 </p>
                 <p className='wow txt words chars splitting' data-splitting>
-                  {AboutInfo1Data.paragraph2}
+                  {AboutInfo1Data?.description2}
                 </p>
               </Split>
             </div>

@@ -2,9 +2,11 @@ import React from 'react';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-import skillsData from '../../data/sections/skills.json';
+// import skillsData from '../../data/sections/skills.json';
 
-const SkillsCircle = ({ from, theme }) => {
+const SkillsCircle = ({ from, theme, skills }) => {
+  const { skillsData, title, subTitle } = skills;
+
   const cpStyle = {
     path: {
       stroke: 'rgb(18, 194, 233)',
@@ -27,10 +29,10 @@ const SkillsCircle = ({ from, theme }) => {
       <div className='container'>
         <div className='row text-center'>
           <div className='mx-auto mb-20'>
-            <h1 className=' color-font fw-200'>My Skills</h1>
+            <h1 className=' color-font fw-200'>{title}</h1>
             <br />
             <p className='wow txt' data-splitting>
-              Discover and Explore My Areas of Expertise
+              {subTitle}
             </p>
           </div>
           <div className='col-lg-12 mx-auto'>
@@ -39,9 +41,9 @@ const SkillsCircle = ({ from, theme }) => {
             <div className='px-auto mx-auto'>
               <div className='row ml-5 pl-5'>
                 {/* ----------------- Three Skill ------------------- */}
-                {skillsData.map((data) => (
+                {skillsData.map((data, index) => (
                   <div
-                    key={data.id}
+                    key={index}
                     className=' col-lg-2 col-md-5   col-sm-10 m-2 p-2'
                   >
                     <div className='item wow fadeInLeft' data-wow-delay='.6'>

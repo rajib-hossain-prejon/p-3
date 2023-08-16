@@ -1,12 +1,14 @@
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
 import { sendContactForm } from '../../../lib/api';
-import ContactFromDate from '../../data/sections/form-info.json';
+
 import Done from '../Done/done';
 import Failed from '../Failed/Failed';
 import Loader from '../Loader/loader';
 
-const ContactForm = () => {
+const ContactForm = ({ propsInfo }) => {
+  const { contactInfo, email, phone } = propsInfo || {};
+
   const messageRef = React.useRef(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const [isDone, setIsDone] = React.useState(false);
@@ -131,13 +133,13 @@ const ContactForm = () => {
               <div className='cont-info'>
                 <h4 className='fw-700 color-font mb-50'>Contact Info.</h4>
                 <h3 className='wow' data-splitting>
-                  {ContactFromDate.title}
+                  Let's Talk.
                 </h3>
                 <div className='item mb-40'>
                   <h5>
-                    <a href='#0'>{ContactFromDate.email}</a>
+                    <a href='#0'>{email}</a>
                   </h5>
-                  <h5>{ContactFromDate.phone}</h5>
+                  <h5>{phone}</h5>
                 </div>
                 {/* <h3 className='wow' data-splitting>
                 Visit Us.
@@ -150,7 +152,18 @@ const ContactForm = () => {
                 </h6>
               </div> */}
                 <div className='social mt-50'>
-                  <a
+                  {contactInfo &&
+                    contactInfo.map((social, index) => {
+                      return (
+                        <React.Fragment key={index}>
+                          <a onClick={() => window.open(social.link, '_blank')}>
+                            <i className={`fab ${social.icon} mx-4`}></i>
+                          </a>
+                        </React.Fragment>
+                      );
+                    })}
+
+                  {/* <a
                     onClick={() =>
                       window.open(
                         'https://www.linkedin.com/in/rajib-hossain-prejon-089505202',
@@ -159,24 +172,7 @@ const ContactForm = () => {
                     }
                   >
                     <i className='fab fa-linkedin mx-4'></i>
-                  </a>
-                  <a
-                    onClick={() =>
-                      window.open('https://wa.me/+8801518647550', '_blank')
-                    }
-                  >
-                    <i className='fab fa-whatsapp mx-4'></i>
-                  </a>
-                  <a
-                    onClick={() =>
-                      window.open(
-                        'https://github.com/rajib-hossain-prejon/',
-                        '_blank'
-                      )
-                    }
-                  >
-                    <i className='fab fa-github mx-4'></i>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

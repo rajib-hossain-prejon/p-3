@@ -4,16 +4,14 @@ import React from 'react';
 import Image from 'next/image';
 
 const ProjectGallery = ({ projectGalleryData }) => {
-  console.log(projectGalleryData[0]);
-
   return (
     <section className='projdtal'>
       <div className='popup-img'>
         <div className='row'>
           <a href='#' className='col-md-3 popimg'>
             <Image
-              alt='Rajib Hossain Prejon Dental Project image 1'
-              src={projectGalleryData[0]}
+              alt={projectGalleryData.imageOne.alt}
+              src={projectGalleryData.imageOne.src}
               height='600'
               width='600'
               priority
@@ -21,8 +19,8 @@ const ProjectGallery = ({ projectGalleryData }) => {
           </a>
           <a href='#' className='col-md-3 popimg'>
             <Image
-              alt='Rajib Hossain Prejon Dental Project image 2'
-              src={projectGalleryData[1]}
+              alt={projectGalleryData.imageTwo.alt}
+              src={projectGalleryData.imageTwo.src}
               height='600'
               width='600'
               priority
@@ -30,8 +28,8 @@ const ProjectGallery = ({ projectGalleryData }) => {
           </a>
           <a href='#' className='col-md-3 popimg'>
             <Image
-              alt='Rajib Hossain Prejon Dental Project image 2'
-              src={projectGalleryData[2]}
+              alt={projectGalleryData.imageThree.alt}
+              src={projectGalleryData.imageThree.src}
               height='600'
               width='600'
               priority
@@ -39,8 +37,8 @@ const ProjectGallery = ({ projectGalleryData }) => {
           </a>
           <a href='#' className='col-md-3 popimg'>
             <Image
-              alt='Rajib Hossain Prejon Dental Project image 3'
-              src={projectGalleryData[3]}
+              alt={projectGalleryData.imageFour.alt}
+              src={projectGalleryData.imageFour.src}
               height='600'
               width='600'
               priority

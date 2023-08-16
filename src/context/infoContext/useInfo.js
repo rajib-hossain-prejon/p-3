@@ -1,19 +1,22 @@
-
 import { useContext } from "react";
-
-import Storage from "../Storage";
+import dbs from "../../api/dbs";
 import { InfoData } from "../context";
+import Storage from "../storage";
 
-export default useInfo = () => {
-  
+const useInfo = () => {
   const { info, setInfo } = useContext(InfoData);
+  
 
-  const infos = (info1) => {
-    setInfo(info1);
-    Storage.storeInfo(info1);
+  const storeInfos = (data) => {
+    
+    setInfo(data);
+
+    
+    Storage.storeData(dbs.INFO,data)
+    
   };
 
-  
-
-  return { infos };
+  return { info, storeInfos };
 };
+
+export default useInfo;

@@ -5,27 +5,33 @@ import LoadingScreen from '../components/Loading-Screen';
 import Cursor from '../components/cursor';
 import ScrollToTop from '../components/scrollToTop';
 
-
+import { AuthProvider } from '../context/UserAuthContext';
 import InfoContext from '../context/infoContext/infoContext';
 import '../styles/main.scss';
 
 function MyApp({ Component, pageProps }) {
 
- 
+  
 
   return (
     <>
-      <Head>
-        <title>Prejon</title>
-        <link rel='icon' href='/img/logo.png' />
-      </Head>
-      
-     <InfoContext>
-       <Cursor />
-      <LoadingScreen />
-      <Component {...pageProps} />
-      <ScrollToTop />
-     </InfoContext>
+      <InfoContext>
+       <AuthProvider>
+        
+
+          <Head>
+            <title>Prejon</title>
+            <link rel='icon' href='/img/logo.png' />
+          </Head>
+
+          <Cursor />
+          <LoadingScreen />
+          <Component {...pageProps} />
+          <ScrollToTop />
+          
+        </AuthProvider>
+      </InfoContext>
+
       <Script id='wow' src='/js/wow.min.js'></Script>
       <Script
         strategy='beforeInteractive'

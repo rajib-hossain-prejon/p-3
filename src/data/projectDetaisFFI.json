@@ -1,3 +1,61 @@
+
+{
+  "title": "Ssebowa- Search Engine",
+  "sub-title": "A powerful and efficient search engine",
+  "clientURLLink": "ssebowa.org",
+  "clientURLName": "Dishan Ssebowa",
+  "imageProjectPageCover": "",
+  "imageHomepageCover": "",
+  "imageProjectDetailsHeader": "",
+  "imagesGallery":[
+"",
+"",
+"",
+"",
+  ],
+  "className": "web",
+  "clientURLName": "",
+  "videoLink": "",
+  "date": "Dec 2022 to April 2023",
+  "categories": [
+    {
+      "title": "Search Engine",
+      "link": "#"
+    }
+  ],
+  "technologies": [
+    {
+      "title": "React",
+      "link": "#"
+    }
+  ],
+
+  "intro": {
+      "content": "Introducing our document scanner app, the perfect solution for anyone looking to go paperless and keep their important documents organized and accessible from anywhere. With advanced image processing algorithms, multiple format options, and easy sharing capabilities, our app makes it easy to digitize your documents with high-quality scans. Features like auto-crop and perspective correction, batch scanning, and OCR technology further streamline the process, making it effortless to keep your documents organized and searchable. Whether you're a student, a professional, or just looking to reduce clutter, our app is designed to make going paperless as easy and convenient as possible.",
+
+      "spmList": [
+        {
+          "id": 1,
+          "name": "High-quality scanning with advanced image processing algorithms"
+        },
+        {
+          "id": 2,
+          "name": "Multiple formats supported, including PDF, JPEG, and PNG."
+        },
+        {
+          "id": 31,
+          "name": "Easy sharing via email, messaging apps, and cloud storage services."
+        },
+        {
+          "id": 4,
+          "name": "Auto-crop and perspective correction for quick and accurate scanning."
+        }
+      ]
+    },
+  
+
+}
+
 [
   {
     "id": 1,

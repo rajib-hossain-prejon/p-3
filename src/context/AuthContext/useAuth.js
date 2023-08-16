@@ -1,22 +1,24 @@
 import jwtDecode from "jwt-decode";
-import { useContext } from "react";
 
-import AuthContext from "./context";
-import authStorage from "./storage";
+import dbs from "../../api/dbs";
+import { default as authStorage, default as storage } from "../storage";
 
-export default useAuth = () => {
-  const { user, setUser } = useContext(AuthContext);
-
-  const logIn = (authToken) => {
+const logIn = (authToken) => {
     const user = jwtDecode(authToken);
-    setUser(user);
-    authStorage.storeToken(authToken);
+    authStorage.storeData(dbs.TOKEN, user);
   };
+ 
+  const getUser = () => {
+    
+   const data = storage.getData(dbs.TOKEN)
 
+   return data;
+  };
+  
   const logOut = () => {
-    setUser(null);
-    authStorage.removeToken();
+    
+    authStorage.removeData(dbs.TOKEN)
   };
 
-  return { user, logIn, logOut };
-};
+
+export default {logIn, logOut, getUser}

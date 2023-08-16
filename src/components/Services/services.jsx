@@ -1,7 +1,9 @@
 import React from 'react';
 import featuresData from '../../data/sections/features.json';
 
-const Services = ({ style, lines }) => {
+const Services = ({ style, lines, servicesData }) => {
+  const { title, subTitle, services } = servicesData || {};
+
   return (
     <section
       className={`services bords section-padding ${
@@ -23,9 +25,9 @@ const Services = ({ style, lines }) => {
         </div>
         <div className='row'>
           {style === '4item'
-            ? featuresData.map((feature) => (
+            ? services?.map((feature, index) => (
                 <div
-                  key={feature.id}
+                  key={index}
                   className='col-lg-6 wow fadeInLeft'
                   data-wow-delay={`${
                     feature.id == 1
@@ -43,22 +45,22 @@ const Services = ({ style, lines }) => {
                     </div>
                     <div className='cont'>
                       <h6>{feature.title}</h6>
-                      <p>{feature.content}</p>
+                      <p>{feature.description}</p>
                     </div>
                   </div>
                 </div>
               ))
             : // max item 3 in Home page
-              featuresData.slice(0, 3).map((feature) => (
+              services?.slice(0, 3).map((feature, index) => (
                 <div
-                  key={feature.id}
+                  key={index}
                   className='col-lg-4 wow fadeInLeft'
                   data-wow-delay='.5s'
                 >
                   <div className='item-box md-mb50'>
                     <span className={`icon ${feature.icon}`}></span>
                     <h6>{feature.title}</h6>
-                    <p>{feature.content}</p>
+                    <p>{feature.description}</p>
                   </div>
                 </div>
               ))}

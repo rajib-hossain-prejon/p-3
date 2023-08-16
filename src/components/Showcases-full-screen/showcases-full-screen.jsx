@@ -6,7 +6,7 @@ import SwiperCore, {
   Parallax,
 } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ShowcassesFullScreenData from '../../data/showcases-full-screen-slider.json';
+// import ShowcassesFullScreenData from '../../data/showcases-full-screen-slider.json';
 
 import 'swiper/css';
 import 'swiper/css/mousewheel';
@@ -17,7 +17,9 @@ import ImageModal from '../Image-modal/image-modal';
 
 SwiperCore.use([Navigation, Pagination, Parallax, Mousewheel]);
 
-const ShowcasesFullScreen = () => {
+const ShowcasesFullScreen = ({ showcaseData }) => {
+  const { ShowcassesFullScreenData } = showcaseData || {};
+
   const [load, setLoad] = React.useState(true);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [imageUrl, setImageUrl] = React.useState('');
@@ -104,8 +106,8 @@ const ShowcasesFullScreen = () => {
             className='swiper-wrapper'
             slidesPerView={1}
           >
-            {ShowcassesFullScreenData.map((slide) => (
-              <SwiperSlide key={slide.id} className='swiper-slide'>
+            {ShowcassesFullScreenData?.map((slide, index) => (
+              <SwiperSlide key={index} className='swiper-slide'>
                 <div
                   className='bg-img valign'
                   style={{

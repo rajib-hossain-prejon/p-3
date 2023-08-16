@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
-import React, { useContext } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
-import { InfoData } from '../../context/context';
 
-const FreelancreIntro = () => {
-  const { info, setInfo } = useContext(InfoData);
+const FreelancreIntro = ({ propsInfo }) => {
+  const { info, heroImage, name, skills, contactInfo, email } = propsInfo || {};
 
   return (
     <header className='freelancre valign'>
@@ -13,10 +12,9 @@ const FreelancreIntro = () => {
         <div className='row'>
           <div className='col-lg-4'>
             <div className='img'>
-              {info && (
+              {heroImage && (
                 <Image
-                  style={{ zIndex: -5 }}
-                  src={info.heroImage}
+                  src={heroImage}
                   alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
                   layout='fill'
                   priority
@@ -28,9 +26,7 @@ const FreelancreIntro = () => {
           <div className='col-lg-8 '>
             <div className='cont'>
               <div>
-                {info && (
-                  <h3 className='cd-headline clip'>{info.name.label}</h3>
-                )}
+                {name && <h3 className='cd-headline clip'>{name.label}</h3>}
               </div>
               <br />
               <div>
@@ -38,11 +34,11 @@ const FreelancreIntro = () => {
                   style={{ fontSize: '32px', lineHeight: '38px' }}
                   className='cd-words-wrapper'
                 >
-                  {info && (
+                  {name && name.title && (
                     <Typewriter
                       options={{
                         wrapperClassName: 'color-font-2 fw-600',
-                        strings: [info.name.title],
+                        strings: [name.title],
                         autoStart: true,
                         loop: true,
                       }}
@@ -55,9 +51,9 @@ const FreelancreIntro = () => {
                 </h1>
               </div>
               <br />
-              {info && (
+              {skills && (
                 <div style={{ fontSize: '20px', lineHeight: '55px' }}>
-                  {info.skills.label}
+                  {skills.label}
                 </div>
               )}
 
@@ -66,11 +62,11 @@ const FreelancreIntro = () => {
                   style={{ fontSize: '30px', lineHeight: '35px' }}
                   className='cd-words-wrapper'
                 >
-                  {info && (
+                  {skills && (
                     <Typewriter
                       options={{
                         wrapperClassName: 'color-font fw-400',
-                        strings: info.skills.titles,
+                        strings: skills.titles,
                         autoStart: true,
                         loop: true,
                       }}
@@ -114,44 +110,37 @@ const FreelancreIntro = () => {
               <li className='flex m-5'>
                 <div className='item mx-auto'>
                   <div className='social '>
-                    <a
-                      onClick={() =>
-                        window.open(
-                          'https://www.linkedin.com/in/rajib-hossain-prejon-089505202',
-                          '_blank'
-                        )
-                      }
-                    >
-                      <i className='fab fa-linkedin mx-4'></i>
-                    </a>
-                    <a
+                    {contactInfo &&
+                      contactInfo.map((social, index) => {
+                        return (
+                          <React.Fragment key={index}>
+                            <a
+                              onClick={() => window.open(social.link, '_blank')}
+                            >
+                              <i className={`fab ${social.icon} mx-4`}></i>
+                            </a>
+                          </React.Fragment>
+                        );
+                      })}
+
+                    {/* <a
                       onClick={() =>
                         window.open('https://wa.me/+8801518647550', '_blank')
                       }
                     >
                       <i className='fab fa-whatsapp mx-4'></i>
-                    </a>
-                    <a
-                      onClick={() =>
-                        window.open(
-                          'https://github.com/rajib-hossain-prejon/',
-                          '_blank'
-                        )
-                      }
-                    >
-                      <i className='fab fa-github mx-4'></i>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </li>
 
               <li className='mail-us'>
-                <a href='mailto:rajibhossainprejon@gmail.com?subject=I want to have an App'>
+                <a href={`mailto:${email}?subject=I want to have an App`}>
                   <div className='flex'>
                     <div className='text valign'>
                       <div className='full-width'>
                         <p>Get In Touch</p>
-                        <h6>rajibhossainprejon@gmail.com</h6>
+                        <h6>{email}</h6>
                       </div>
                     </div>
                     <div className='mail-icon'>

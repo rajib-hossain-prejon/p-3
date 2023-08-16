@@ -1,36 +1,50 @@
 import React from "react";
+import dbs from "../../api/dbs";
 import getData from "../../api/getData";
-import Storage from "../Storage";
+import Loader from "../../components/Loader/loader";
 import { InfoData } from "../context";
-
+import Storage from "../storage";
+import useInfo from "./useInfo";
 
 
 
  
  export default  function InfoContext({ children }) {
-  const [info, setInfo] = React.useState();
   
-   const restoreInfo = async () => {
-   const infos2 = await Storage.getInfo();
+
+  const [info, setInfo] = React.useState();
+  const [isLoading, setIsLoading] = React.useState(false);
+  const { storeInfos } = useInfo();
+  
+  
+  const restoreInfo = async () => {
+  setIsLoading(true);
+  const infos2 = await Storage.getData(dbs.INFO);
     
     
     if (infos2) {
-     console.log('Got It', infos2)
-     setInfo(infos2)
+    
+    setInfo(infos2)
+    // storeInfos(infos2);
+    setIsLoading(false);
     }else{
       try {
-       console.log('Not Got It')
-      const infoServerData = await getData.getListingsFromFirebase();
-      console.log('gd: ', infoServerData[0])
-      setInfo(infoServerData[0])
-      Storage.storeInfo(infoServerData[0])
       
+      const infoServerData = await getData.getListingsFromFirebase(dbs.INFO);
+      
+      setInfo(infoServerData[0])
+      Storage.storeData(dbs.INFO,infoServerData[0])
+      // storeInfos(infoServerData[0])
+      setIsLoading(false);
       
     } catch (error) {
       
       console.log('err', error);
+      setIsLoading(false);
     }
+    setIsLoading(false);
     }
+    setIsLoading(false);
   };
 
   React.useEffect(()=>{
@@ -40,9 +54,12 @@ restoreInfo();
   
 
   return (
+   <>
+   {isLoading && <Loader/> }
     <InfoData.Provider value={{ info, setInfo }}>
       {children}
     </InfoData.Provider>
+   </>
   );
 }
 

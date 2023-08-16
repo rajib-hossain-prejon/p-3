@@ -7,14 +7,14 @@
   },
   {
     "id": 2,
-    "title": "React Native",
-    "img": "https://img.icons8.com/office/40/null/react.png",
+    "title": "Expo",
+    "img": "https://img.icons8.com/fluency-systems-regular/48/228BE6/camping-tent.png",
     "percantage": "70"
   },
   {
     "id": 3,
     "title": "Next.js",
-    "img": "https://img.icons8.com/color/48/null/nextjs.png",
+    "img": "https://img.icons8.com/fluency/48/nextjs.png",
     "percantage": "80"
   },
   {

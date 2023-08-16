@@ -1,26 +1,25 @@
-
-
-
-
 const keyOfInfo = "info";
+const keyOfServices = "services";
 
-
-const storeInfo = (infoData) => {
- 
-  localStorage.setItem(keyOfInfo, JSON.stringify(infoData));
-  
-};
-
-const getInfo = async () => {
-  try {
-    const data = await localStorage.getItem(keyOfInfo)
-    const filteredData = JSON.parse(data);
-    return filteredData;
-  } catch (error) {
-    console.log("Error getting the auth token", error);
+const storeData = (key, data) => {
+  if (typeof window !== 'undefined') {
+    sessionStorage.setItem(key, JSON.stringify(data));
   }
 };
 
+const getData = (key) => {
+  if (typeof window !== 'undefined') {
+    const data = sessionStorage.getItem(key);
+    const filteredData = JSON.parse(data);
+    return filteredData;
+  }
+  return null;
+};
 
+const removeData = (key) => {
+  if (typeof window !== 'undefined') {
+    sessionStorage.removeItem(key);
+  }
+};
 
-export default { getInfo, storeInfo};
+export default { storeData, getData, removeData };

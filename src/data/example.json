@@ -1,0 +1,246 @@
+
+{
+  "title": "Ssebowa- Search Engine",
+  "sub-title": "A powerful and efficient search engine",
+  "clientURLLink": "ssebowa.org",
+  "clientURLName": "Dishan Ssebowa",
+  "className": "web",
+  "categories": [
+    {
+      "title": "Search Engine",
+      "link": "#"
+    }
+  ],
+  "date": "",
+  "imageProjectPageCover": "",
+  "imageHomepageCover": "",
+  "imageProjectDetailsHeader": "",
+  "imagesGallery":[
+"",
+"",
+"",
+"",
+  ],
+ 
+  
+  
+  
+  
+
+  "intro": {
+      "content": "Introducing PDF Reader, the perfect solution for all your document-reading needs! With its user-friendly interface, PDF Reader makes it easy to auto-scan, find, and list all PDF files on your phone, allowing you to quickly open, read, and manage your files in one place. This powerful PDF reader and editor is the best choice for Android users, offering features like page search, bookmarks, and text copy support. Plus, PDF Reader is completely free, making it the most cost-effective way to manage and read your PDF files. Download PDF Reader today and experience the freedom and convenience of having all your PDF files in one place.",
+      "spmList": [
+        {
+          "id": 1,
+          "name": "PDF Management: Easily manage all your PDF files in one place."
+        },
+        {
+          "id": 2,
+          "name": "AAdvanced Reading Options: Choose from vertical or horizontal view modes and optimize page transitions."
+        },
+        {
+          "id": 3,
+          "name": "Quick Page Moving: Navigate to any page with the scroll bar or page index."
+        },
+        {
+          "id": 4,
+          "name": "Night View: Protect your eyes with a darker color scheme for reading PDFs at night."
+        }
+      ]
+    },
+    "gallery": [
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259547/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/PDF-2_copy_gmznln.png",
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259547/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/PDF-2_bcap1l.png",
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259547/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/PDF-3_gzd1ap.png",
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259548/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/Untitled_design-2_khr6yj.png",
+      "/img/portfolio/project2/7.jpg"
+    ],
+    "description": {
+      "content": " Looking for a simple and easy-to-use document-reading app? PDF Reader is exactly what you need! It can auto-scan, find, and list all PDF files on your phone, allowing you to fast open, read and manage your files in one place conveniently. PDF Reader is the best PDF reading and editing application on android. PDF Reader manages and displays all PDF files on a single screen. You will not need to find PDF files everywhere in the phone. You just select the PDF file you want to view and open it. This application supports you to easily open PDF files and read documents offline anywhere, anytime. With PDF Reader you can easily search, read, and create a new PDF document, easily share it via email or social networking. Powerful PDF reader for page search, bookmarks, and text copy support. Now, reading PDFs is no longer an obstacle to your life and work. The only thing you need to do is to download this PDF Reader application, we will help you do all the rest. PDF Reader is the best choice for you to work with professional-looking PDF files anytime, anywhere. More particularly, it is completely free for you. PDF has a user-friendly interface so you only need One touch to view the desired PDF file. From the optimization of the user experience, we developed the PDF open application with many other advantages:Manage all the PDF files in your device: \"Files\" The application will scan all the PDF files in your device and focus in a single screen.\"Recent\" Contains all the PDFs you have open, sorted by the latest open time, and you can easily view the PDFs you have recently viewed.\"Bookmark\" Contains the bookmark PDF files that can be opened quickly. If you have a lot of PDF files, you'll also easily find them with \"Organize\" and \"Search\" features in the application's PDF management interface. You can easily change the name, delete file, view details of your PDF file. Share it to your fellow colleagues by email or co-worker at this screen. Touch to open the PDF file you want to view. We are always interested in your experience, so please let us know your comments by leaving a comment. We will try to develop to bring the best version of software to open PDF files.",
+      "spmList": [
+        {
+          "id": 1,
+          "title": "Quick display",
+          "name": "PDF Reader uses the most advanced technology available today to speed the loading and display of PDF files quickly even with large PDF files."
+        },
+        {
+          "id": 2,
+          "title": "Diverse view mode:",
+          "name": " You can choose the vertical or horizontal view that fits your needs. Transition modes between pages are optimized to deliver the best reading experience."
+        },
+        {
+          "id": 3,
+          "title": "Batch scanning",
+          "name": " You can scan multiple pages at once and save them as a single document, making it easy to digitize long documents like contracts and manuals. You can also re-order and delete pages as needed before saving."
+        },
+        {
+          "id": 4,
+          "title": "Quick page moving:",
+          "name": "You can go to any page with the scroll bar, or you can enter the page index to move to the page you want to read."
+        },
+        {
+          "id": 5,
+          "title": "Add bookmark",
+          "name": "You can bookmark PDF file so that it can easily be read again later."
+        },
+        {
+          "id": 6,
+          "title": "Outline of the PDF file",
+          "name": " PDF Reader will list the chapters of the PDF file. You will easily move to that chapter."
+        },
+        {
+          "id": 7,
+          "title": "Night view",
+          "name": "You can switch the night view mode with darker colors to help protect your eyes when reading PDFs at night."
+        }
+      ]
+    },
+  "videoLink": "https://vimeo.com/127203262"
+
+}
+
+
+
+
+
+
+{
+  "id": 1,
+  "unique_id": "mobile-app-1-500x470-doc-scanner",
+  "title": "Doc Scanner - Scan to PDF",
+  "category": "Mobile App",
+  "className": "all mobile",
+  "img": "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_800,h_1000,c_scale/v1677517520/futureflowit.com/projects/projects-800x1000/1.doc_scanner_1_qjbyni.png",
+  "link": "/project-details2/mobile-app-1-500x470-doc-scanner"
+}
+ {
+    "id": 6,
+    "unique_id": "mobile-app-6-500x470-pdf-reader",
+    "title": {
+      "small": "Effortlessly manage and read your PDFs with PDF Reader.",
+      "big": "PDF Reader-PDF View & Create"
+    },
+    "btn": "true",
+    "clientURLLink": "https://play.google.com/store/apps/details?id=inc.genesis.pdfreader&hl=en&gl=US",
+    "projectHeaderImage": "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto/v1677400532/futureflowit.com/projects/Mobile%20App%20Background%20Image/pexels-max-mishin-11026126_vpsmjy.jpg",
+    "videoLink": "https://vimeo.com/127203262",
+    "clientURLName": "playstore",
+    "date": "15 Dec 2022",
+    "categories": [
+      {
+        "id": 1,
+        "name": "Tools",
+        "link": "#"
+      }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Java",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "name": "Kotlin",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "name": "MVVM",
+        "link": "#"
+      },
+      {
+        "id": 4,
+        "name": "LiveData",
+        "link": "#"
+      },
+      {
+        "id": 5,
+        "name": "SQLite",
+        "link": "#"
+      },
+      {
+        "id": 6,
+        "name": "Room DB",
+        "link": "#"
+      }
+    ],
+    "intro": {
+      "content": "Introducing PDF Reader, the perfect solution for all your document-reading needs! With its user-friendly interface, PDF Reader makes it easy to auto-scan, find, and list all PDF files on your phone, allowing you to quickly open, read, and manage your files in one place. This powerful PDF reader and editor is the best choice for Android users, offering features like page search, bookmarks, and text copy support. Plus, PDF Reader is completely free, making it the most cost-effective way to manage and read your PDF files. Download PDF Reader today and experience the freedom and convenience of having all your PDF files in one place.",
+      "spmList": [
+        {
+          "id": 1,
+          "name": "PDF Management: Easily manage all your PDF files in one place."
+        },
+        {
+          "id": 2,
+          "name": "AAdvanced Reading Options: Choose from vertical or horizontal view modes and optimize page transitions."
+        },
+        {
+          "id": 3,
+          "name": "Quick Page Moving: Navigate to any page with the scroll bar or page index."
+        },
+        {
+          "id": 4,
+          "name": "Night View: Protect your eyes with a darker color scheme for reading PDFs at night."
+        }
+      ]
+    },
+    "gallery": [
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259547/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/PDF-2_copy_gmznln.png",
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259547/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/PDF-2_bcap1l.png",
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259547/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/PDF-3_gzd1ap.png",
+      "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_600,h_600,c_scale/v1677259548/futureflowit.com/projects/projects-600%2A600/PDF%20Readem-M/Untitled_design-2_khr6yj.png",
+      "/img/portfolio/project2/7.jpg"
+    ],
+    "description": {
+      "content": " Looking for a simple and easy-to-use document-reading app? PDF Reader is exactly what you need! It can auto-scan, find, and list all PDF files on your phone, allowing you to fast open, read and manage your files in one place conveniently. PDF Reader is the best PDF reading and editing application on android. PDF Reader manages and displays all PDF files on a single screen. You will not need to find PDF files everywhere in the phone. You just select the PDF file you want to view and open it. This application supports you to easily open PDF files and read documents offline anywhere, anytime. With PDF Reader you can easily search, read, and create a new PDF document, easily share it via email or social networking. Powerful PDF reader for page search, bookmarks, and text copy support. Now, reading PDFs is no longer an obstacle to your life and work. The only thing you need to do is to download this PDF Reader application, we will help you do all the rest. PDF Reader is the best choice for you to work with professional-looking PDF files anytime, anywhere. More particularly, it is completely free for you. PDF has a user-friendly interface so you only need One touch to view the desired PDF file. From the optimization of the user experience, we developed the PDF open application with many other advantages:Manage all the PDF files in your device: \"Files\" The application will scan all the PDF files in your device and focus in a single screen.\"Recent\" Contains all the PDFs you have open, sorted by the latest open time, and you can easily view the PDFs you have recently viewed.\"Bookmark\" Contains the bookmark PDF files that can be opened quickly. If you have a lot of PDF files, you'll also easily find them with \"Organize\" and \"Search\" features in the application's PDF management interface. You can easily change the name, delete file, view details of your PDF file. Share it to your fellow colleagues by email or co-worker at this screen. Touch to open the PDF file you want to view. We are always interested in your experience, so please let us know your comments by leaving a comment. We will try to develop to bring the best version of software to open PDF files.",
+      "spmList": [
+        {
+          "id": 1,
+          "title": "Quick display",
+          "name": "PDF Reader uses the most advanced technology available today to speed the loading and display of PDF files quickly even with large PDF files."
+        },
+        {
+          "id": 2,
+          "title": "Diverse view mode:",
+          "name": " You can choose the vertical or horizontal view that fits your needs. Transition modes between pages are optimized to deliver the best reading experience."
+        },
+        {
+          "id": 3,
+          "title": "Batch scanning",
+          "name": " You can scan multiple pages at once and save them as a single document, making it easy to digitize long documents like contracts and manuals. You can also re-order and delete pages as needed before saving."
+        },
+        {
+          "id": 4,
+          "title": "Quick page moving:",
+          "name": "You can go to any page with the scroll bar, or you can enter the page index to move to the page you want to read."
+        },
+        {
+          "id": 5,
+          "title": "Add bookmark",
+          "name": "You can bookmark PDF file so that it can easily be read again later."
+        },
+        {
+          "id": 6,
+          "title": "Outline of the PDF file",
+          "name": " PDF Reader will list the chapters of the PDF file. You will easily move to that chapter."
+        },
+        {
+          "id": 7,
+          "title": "Night view",
+          "name": "You can switch the night view mode with darker colors to help protect your eyes when reading PDFs at night."
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "unique_id": "mobile-app-4-500x470-esprit-vpn",
+    "title": "Esprit VPN - Fast and Secure",
+    "category": "Mobile App",
+    "className": "mobile",
+    "img": "https://res.cloudinary.com/drrlu7qrl/image/upload/f_auto,q_auto,w_500,h_470,c_scale/v1677508370/futureflowit.com/projects/projects-500%2A470/esprit_vpn_bkviu4.png",
+    "link": "/project-details2/mobile-app-4-500x470-esprit-vpn",
+    "resolution": "500*470"
+  }

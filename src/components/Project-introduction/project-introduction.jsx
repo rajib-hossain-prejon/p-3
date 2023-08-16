@@ -16,8 +16,8 @@ const ProjectIntroduction = ({ projectIntroductionData }) => {
             <div className='text js-scroll__content'>
               <p className='extra-text'>{projectIntroductionData.content}</p>
               <ul className='smp-list mt-30'>
-                {projectIntroductionData.spmList.map((item) => (
-                  <li key={item.id}>{item.name}</li>
+                {projectIntroductionData?.spmList?.map((item, index) => (
+                  <li key={index}>{item.title}</li>
                 ))}
               </ul>
             </div>
