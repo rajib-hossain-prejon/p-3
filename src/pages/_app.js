@@ -5,7 +5,6 @@ import LoadingScreen from '../components/Loading-Screen';
 import Cursor from '../components/cursor';
 import ScrollToTop from '../components/scrollToTop';
 
-import { AuthProvider } from '../context/UserAuthContext';
 import InfoContext from '../context/infoContext/infoContext';
 import '../styles/main.scss';
 
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <InfoContext>
-       <AuthProvider>
+       
         
 
           <Head>
@@ -29,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
           <ScrollToTop />
           
-        </AuthProvider>
+        
       </InfoContext>
 
       <Script id='wow' src='/js/wow.min.js'></Script>
