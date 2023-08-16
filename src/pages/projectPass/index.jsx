@@ -7,15 +7,13 @@ import CallToAction from '../../components/Call-to-action/call-to-action';
 import Loader from '../../components/Loader/loader';
 import ProjectPassForm from '../../components/project-pass-form/project-pass-form';
 import useAuth from '../../context/AuthContext/useAuth';
-import { AuthContext } from '../../context/UserAuthContext';
-
 const ProjectPass = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const fixedHeader = React.useRef(null);
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-  const authContext = React.useContext(AuthContext);
+
   const router = useRouter();
 
   React.useEffect(() => {

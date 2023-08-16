@@ -7,7 +7,6 @@ import { auth } from '../../config/firebase/firebase';
 
 import { Field, Form, Formik } from 'formik';
 import useAuth from '../../context/AuthContext/useAuth';
-import { AuthContext } from '../../context/UserAuthContext';
 import Done from '../Done/done';
 import Failed from '../Failed/Failed';
 import Loader from '../Loader/loader';
@@ -15,8 +14,6 @@ import Loader from '../Loader/loader';
 const ProjectPassForm = ({ noLine }) => {
   const messageRef = React.useRef(null);
   const router = useRouter();
-
-  const authContext = React.useContext(AuthContext);
 
   const [isLoading, setIsLoading] = React.useState(false);
   const [isDone, setIsDone] = React.useState(false);

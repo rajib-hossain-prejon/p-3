@@ -9,7 +9,6 @@ import dbs from '../../api/dbs';
 import getData from '../../api/getData';
 import ClientProjectForms from '../../components/Client-project-forms/client-project-forms';
 import useAuth from '../../context/AuthContext/useAuth';
-import { AuthContext } from '../../context/UserAuthContext';
 
 export async function getStaticPaths() {
   const projects = await getData.getListingsFromFirebase(dbs.PROJECT_HUB);
@@ -59,7 +58,7 @@ const ClientsProject = ({ project, error }) => {
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-  const authContext = React.useContext(AuthContext);
+
   const router = useRouter();
 
   const restoreUser = async () => {

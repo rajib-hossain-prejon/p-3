@@ -15,12 +15,14 @@ const TestimonialsArch = ({ reviews }) => {
           <div
             onClick={() => sliderRef.current.slickNext()}
             className='next cursor-pointer'
+            style={{ cursor: 'pointer' }}
           >
             <span className='pe-7s-angle-right'></span>
           </div>
           <div
             onClick={() => sliderRef.current.slickPrev()}
             className='prev cursor-pointer'
+            style={{ cursor: 'pointer' }}
           >
             <span className='pe-7s-angle-left'></span>
           </div>

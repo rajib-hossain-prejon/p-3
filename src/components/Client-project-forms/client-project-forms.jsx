@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 import dbs from '../../api/dbs';
 import { auth, db, storage } from '../../config/firebase/firebase';
 import useAuth from '../../context/AuthContext/useAuth';
-import { AuthContext } from '../../context/UserAuthContext';
+
 import Done from '../Done/done';
 import Failed from '../Failed/Failed';
 import Loader from '../Loader/loader';
@@ -37,7 +37,7 @@ const ClientProjectForms = ({ project }) => {
   const [isDone, setIsDone] = React.useState(false);
   const [isFailed, setIsFailed] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const authContext = React.useContext(AuthContext);
+
   const reviewCollectionRef = collection(db, dbs.REVIEWS);
 
   const handleGetProjectClick = () => {
