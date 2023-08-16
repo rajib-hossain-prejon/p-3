@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import dbs from '../../api/dbs';
-import storage from '../../context/storage';
+import storage from '../../context/storage.js';
 
 const BlogGrid = ({ blogs, blogsImage, currentPage, postsPerPage }) => {
   const router = useRouter();

@@ -1,7 +1,7 @@
 import jwtDecode from "jwt-decode";
 
 import dbs from "../../api/dbs";
-import authStorage from "../storage";
+import authStorage from "../storage.js";
 
 
 

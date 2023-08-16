@@ -8,7 +8,7 @@ import DarkTheme from '../../layouts/Dark';
 import { useRouter } from 'next/router';
 import dbs from '../../api/dbs';
 import getData from '../../api/getData';
-import storage from '../../context/storage';
+import storage from '../../context/storage.js';
 
 export async function getStaticPaths() {
   function formatDate(date) {
