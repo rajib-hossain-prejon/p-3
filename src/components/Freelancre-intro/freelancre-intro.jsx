@@ -111,7 +111,7 @@ const FreelancreIntro = ({ propsInfo }) => {
                 <div className='item mx-auto'>
                   <div className='social '>
                     {contactInfo &&
-                      contactInfo.map((social, index) => {
+                      contactInfo?.map((social, index) => {
                         return (
                           <React.Fragment key={index}>
                             <a

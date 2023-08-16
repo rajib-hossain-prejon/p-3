@@ -43,7 +43,7 @@ const WorksStyle3 = ({ projectsOfLower, projectsOfMiddleTwo }) => {
 
           <div className='gallery-mons full-width'>
             {projectsOfMiddleTwo &&
-              projectsOfMiddleTwo.map((item, index) => {
+              projectsOfMiddleTwo?.map((item, index) => {
                 return (
                   <React.Fragment key={index}>
                     {item.resolution === '800*800' && (
@@ -165,7 +165,7 @@ const WorksStyle3 = ({ projectsOfLower, projectsOfMiddleTwo }) => {
             </div> */}
 
             {projectsOfLower &&
-              projectsOfLower.map((project, index) => {
+              projectsOfLower?.map((project, index) => {
                 return (
                   <div
                     className={`items width2 ${project.className} wow fadeInUp`}

@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 
 const TestimonialsArch = ({ reviews }) => {
   const sliderRef = useRef(null);
-  const updatedReviews = reviews.filter((review) => review.visible === true);
+  const updatedReviews = reviews?.filter((review) => review.visible === true);
 
   const renderArrows = () => {
     return (
@@ -89,7 +89,7 @@ const TestimonialsArch = ({ reviews }) => {
               }}
             >
               {updatedReviews &&
-                updatedReviews.map((review, index) => (
+                updatedReviews?.map((review, index) => (
                   <React.Fragment key={index}>
                     <div className='item'>
                       <div className='info inf-lrg valign'>
