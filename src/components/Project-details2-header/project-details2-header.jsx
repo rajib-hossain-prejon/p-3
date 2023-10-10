@@ -6,7 +6,10 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
     <section
       className='page-header proj-det bg-img parallaxie valign'
       style={{
-        backgroundImage: `url('${projectHeaderData.imageProjectDetailsHeader.src}')`,
+        backgroundImage: `url('${
+          projectHeaderData?.imageProjectDetailsHeader?.src ||
+          'https://firebasestorage.googleapis.com/v0/b/rajibhossainprejon-de7fb.appspot.com/o/projects%2FimageProjectsDetailsBackground5184x3456%2FRajib%20Hossain%20Prejon%20Full%20Stack%20Developer%20Full%20Stack%20Web%2C%20Android%20%26%20IOS%20developer%20Mobile%20app%20development%20API%20development%20MERN%20stack%20developer%20Node%20js%20Developer%20Django%20rajibhossainprejon.com%20(2).jpg?alt=media&token=f6ff5983-4f69-487a-967e-74fb551cacc3'
+        }')`,
       }}
       data-overlay-dark='4'
     >
