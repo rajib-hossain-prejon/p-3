@@ -268,7 +268,7 @@ const ClientProjectForms = ({ project }) => {
                               ) : (
                                 <Image
                                   src='/img/upload-photo-200x200.png'
-                                  alt='rajibhossainprejon.com software engineer'
+                                  alt='rhprejon.com software engineer'
                                   height={200}
                                   width={200}
                                 />

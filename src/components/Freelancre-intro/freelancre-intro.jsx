@@ -6,6 +6,8 @@ import Typewriter from 'typewriter-effect';
 const FreelancreIntro = ({ propsInfo }) => {
   const { info, heroImage, name, skills, contactInfo, email } = propsInfo || {};
 
+  const newEmail = 'mail@rhprejon.com';
+
   return (
     <header className='freelancre valign'>
       <div className='container'>
@@ -135,12 +137,12 @@ const FreelancreIntro = ({ propsInfo }) => {
               </li>
 
               <li className='mail-us'>
-                <a href={`mailto:${email}?subject=I want to have an App`}>
+                <a href={`mailto:${newEmail}?subject=I want to have an App`}>
                   <div className='flex'>
                     <div className='text valign'>
                       <div className='full-width'>
                         <p>Get In Touch</p>
-                        <h6>{email}</h6>
+                        <h6>{newEmail}</h6>
                       </div>
                     </div>
                     <div className='mail-icon'>

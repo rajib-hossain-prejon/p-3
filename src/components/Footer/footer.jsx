@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import appData from '../../data/app.json';
 
 const Footer = ({ hideBGCOLOR }) => {
@@ -25,7 +25,7 @@ const Footer = ({ hideBGCOLOR }) => {
                   <span className='icon pe-7s-mail'></span>
                   <div className='cont'>
                     <h6>Email Me</h6>
-                    <p>rajibhossainprejon@gmail.com</p>
+                    <p>mail@rhprejon.com</p>
                   </div>
                 </li>
                 <li>

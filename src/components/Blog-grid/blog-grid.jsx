@@ -51,7 +51,7 @@ const BlogGrid = ({ blogs, blogsImage, currentPage, postsPerPage }) => {
                           width={1000}
                           alt={
                             blogItem.alt ||
-                            'rajibhossainprejon.com web and mobile app developer'
+                            'rhprejon.com web and mobile app developer'
                           }
                           priority
                         />
