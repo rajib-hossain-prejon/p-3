@@ -15,7 +15,7 @@ const FreelancreIntro = ({ propsInfo }) => {
               {heroImage && (
                 <Image
                   src={heroImage}
-                  alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer'
+                  alt='Rajib Hossain Prejon Full Stack Web and Moblile App Developer 1000x1150'
                   layout='fill'
                   priority
                 />
